@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ゴルファーズ工房 新LP｜3案比較</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F5F2;--card:#FFFFFF;--ink:#1D2023;--ink-2:#454A4F;--muted:#737980;--line:#DDDDD7;
+  --a:#1F2E46;--a-soft:#E8EBF0;
+  --b:#0F5132;--b-soft:#E3EFE2;
+  --c:#E0480F;--c-soft:#FCE7DD;
+  --wrap:1240px;--gutter:clamp(16px,4vw,40px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;font-size:15.5px;line-height:1.8;letter-spacing:.02em;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+:focus-visible{outline:3px solid #2F6FED;outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+
+.top{padding:clamp(36px,6vw,72px) 0 clamp(24px,4vw,40px)}
+.top__k{font-size:12.5px;font-weight:700;letter-spacing:.16em;color:var(--muted)}
+.top h1{margin-top:10px;font-weight:900;font-size:clamp(1.7rem,4.6vw,2.7rem);line-height:1.4;letter-spacing:.02em}
+.top p{margin-top:16px;max-width:46em;color:var(--ink-2)}
+.same{margin-top:22px;display:inline-flex;flex-wrap:wrap;gap:6px 16px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 18px;font-size:13.5px}
+.same b{font-weight:700}
+
+/* cards */
+.cards{display:grid;gap:22px;padding-bottom:clamp(40px,6vw,72px)}
+@media (min-width:980px){.cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;border-top:5px solid var(--k)}
+.card--a{--k:var(--a);--soft:var(--a-soft)}
+.card--b{--k:var(--b);--soft:var(--b-soft)}
+.card--c{--k:var(--c);--soft:var(--c-soft)}
+.thumb{position:relative;display:block;background:var(--soft);padding:22px 22px 0;text-decoration:none;overflow:hidden}
+.thumb__d{border-radius:8px 8px 0 0;overflow:hidden;box-shadow:0 10px 30px -12px rgba(0,0,0,.35);border:1px solid rgba(0,0,0,.12);border-bottom:0;aspect-ratio:1360/800}
+.thumb__d img{width:100%;height:100%;object-fit:cover;object-position:top}
+.thumb__m{position:absolute;right:18px;bottom:-6px;width:25%;border-radius:12px 12px 0 0;overflow:hidden;border:4px solid #17191B;border-bottom:0;box-shadow:0 10px 26px -8px rgba(0,0,0,.5);aspect-ratio:390/640;background:#17191B}
+.thumb__m img{width:100%;height:100%;object-fit:cover;object-position:top}
+.card__body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:14px;flex:1}
+.card__tag{display:flex;align-items:center;gap:10px}
+.card__tag b{width:34px;height:34px;border-radius:50%;background:var(--k);color:#fff;display:grid;place-items:center;font-weight:900;font-size:16px;flex:none}
+.card__tag span{font-size:12.5px;font-weight:700;letter-spacing:.1em;color:var(--k)}
+.card h2{font-weight:900;font-size:1.4rem;line-height:1.4}
+.card h2 small{display:block;font-weight:500;font-size:12.5px;color:var(--muted);margin-top:2px}
+.card__copy{font-weight:700;font-size:1.02rem;line-height:1.6;padding:12px 16px;background:var(--soft);border-radius:8px}
+.card__desc{font-size:14.5px;color:var(--ink-2);line-height:1.85}
+.card dl{display:grid;grid-template-columns:6.6em minmax(0,1fr);gap:8px 12px;font-size:13.5px;line-height:1.7;border-top:1px solid var(--line);padding-top:14px}
+.card dt{font-weight:700;color:var(--muted)}
+.card__btn{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:.6em;min-height:52px;border-radius:10px;background:var(--k);color:#fff!important;text-decoration:none;font-weight:900;letter-spacing:.06em}
+.card__btn:hover{filter:brightness(1.12)}
+
+/* table */
+.sec{padding:clamp(40px,6vw,72px) 0;border-top:1px solid var(--line)}
+.sec h2{font-weight:900;font-size:clamp(1.3rem,3vw,1.7rem);line-height:1.5}
+.sec>.wrap>p.lede{margin-top:10px;color:var(--ink-2);max-width:46em}
+.tblwrap{margin-top:26px;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{width:100%;min-width:860px;border-collapse:collapse;font-size:14px;line-height:1.75}
+th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+tr:last-child th,tr:last-child td{border-bottom:0}
+thead th{font-weight:900;font-size:15px;position:sticky;top:0;background:var(--card)}
+thead th span{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;color:#fff;font-size:13px;margin-right:8px;vertical-align:1px}
+thead th:nth-child(2) span{background:var(--a)}thead th:nth-child(3) span{background:var(--b)}thead th:nth-child(4) span{background:var(--c)}
+tbody th{width:10.5em;font-weight:700;color:var(--ink-2);background:#FAFAF8;white-space:nowrap}
+td{width:29%}
+td b{font-weight:700}
+.dots{letter-spacing:.2em;font-size:12px;margin-right:6px}
+.col-a .dots{color:var(--a)}.col-b .dots{color:var(--b)}.col-c .dots{color:var(--c)}
+.sw{display:inline-flex;gap:4px;vertical-align:-3px;margin-right:8px}
+.sw i{width:16px;height:16px;border-radius:4px;border:1px solid rgba(0,0,0,.15)}
+tr.warn td{background:#FFFBF2}
+.hint{margin-top:10px;font-size:12.5px;color:var(--muted)}
+
+/* shared spec */
+.spec{margin-top:26px;display:grid;gap:18px}
+@media (min-width:900px){.spec{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.box h3{font-weight:900;font-size:1.05rem;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.box dl{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 14px;font-size:14.5px}
+.box dt,.box dd{padding:10px 0;border-bottom:1px dashed var(--line)}
+.box dd{font-weight:700;text-align:right;white-space:nowrap}
+.box dl>:nth-last-child(-n+2){border-bottom:0}
+.tiers{display:grid;gap:0;font-size:14px}
+.tiers div{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:4px 14px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.tiers div:last-child{border-bottom:0}
+.tiers b{font-weight:900;font-size:1.05rem}
+.tiers b small{display:block;font-weight:500;font-size:12px;color:var(--muted)}
+.tiers span{color:var(--ink-2);line-height:1.75}
+
+/* decisions */
+.todo{margin-top:26px;display:grid;gap:12px;counter-reset:t}
+@media (min-width:900px){.todo{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.todo li{counter-increment:t;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px 18px 62px;position:relative;font-size:14.5px;line-height:1.8}
+.todo li::before{content:counter(t);position:absolute;left:18px;top:18px;width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:900;font-size:14px}
+.todo b{display:block;font-weight:900;font-size:1rem}
+.todo span{color:var(--ink-2)}
+
+.foot{padding:28px 0 40px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <p class="top__k">ゴルファーズ工房　新LP　検討用</p>
+    <h1>方向性のちがう3案を、<br>見比べてください。</h1>
+    <p>サービスの中身と料金は、3案とも同じ仮案です。変えているのは「名前」「誰に向けるか」「何を主役にするか」「見た目と口調」の4点。それぞれ実際のページとして開けますので、スマホとパソコンの両方でご覧ください。</p>
+    <p class="same"><b>3案共通：</b><span>シャフトレンタル（7泊8日）</span><span>月額会員 4プラン（月3,300円〜165,000円）</span><span>クラブカルテ</span><span>通常メニューは現行のまま</span></p>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <div class="cards">
+
+    <article class="card card--a">
+      <a class="thumb" href="pattern-a.html" target="_blank" rel="noopener" aria-label="A案のページを開く">
+        <div class="thumb__d"><img src="compare/a-desktop.jpg" width="1360" height="880" alt="A案 パソコン表示"></div>
+        <div class="thumb__m"><img src="compare/a-mobile.jpg" width="780" height="1560" alt="A案 スマホ表示"></div>
+      </a>
+      <div class="card__body">
+        <p class="card__tag"><b>A</b><span>和の仕立て</span></p>
+        <h2>誂 ATSURAE<small>あつらえ ／ by Golfer's工房</small></h2>
+        <p class="card__copy">十四本に、かかりつけの職人を。</p>
+        <p class="card__desc">屋号は残したまま、上位ラインに別の名前をつける案。静かで落ち着いた和の印象。会員制を主役に、ベテランのお客様へ向けます。</p>
+        <dl>
+          <dt>主役</dt><dd>月額会員</dd>
+          <dt>向ける相手</dt><dd>50〜60代のベテラン</dd>
+          <dt>プラン名</dt><dd>点検／手入れ／専属／別誂</dd>
+        </dl>
+        <a class="card__btn" href="pattern-a.html" target="_blank" rel="noopener">A案を開く →</a>
+      </div>
+    </article>
+
+    <article class="card card--b">
+      <a class="thumb" href="pattern-b.html" target="_blank" rel="noopener" aria-label="B案のページを開く">
+        <div class="thumb__d"><img src="compare/b-desktop.jpg" width="1360" height="880" alt="B案 パソコン表示"></div>
+        <div class="thumb__m"><img src="compare/b-mobile.jpg" width="780" height="1560" alt="B案 スマホ表示"></div>
+      </a>
+      <div class="card__body">
+        <p class="card__tag"><b>B</b><span>いまの延長で格上げ</span></p>
+        <h2>ゴルファーズ工房 メンバーズ<small>別の名前は立てない</small></h2>
+        <p class="card__copy">扉は開けたまま、もう一歩、奥へ。</p>
+        <p class="card__desc">いまのロゴと緑をそのまま引き継ぎ、親しみやすさを残して上質にする案。クラブカルテを入口に、常連のお客様が自然に会員へ上がれます。</p>
+        <dl>
+          <dt>主役</dt><dd>クラブカルテ</dd>
+          <dt>向ける相手</dt><dd>いまの常連と、その紹介</dd>
+          <dt>プラン名</dt><dd>ふだん／しっかり／とことん／おまかせ</dd>
+        </dl>
+        <a class="card__btn" href="pattern-b.html" target="_blank" rel="noopener">B案を開く →</a>
+      </div>
+    </article>
+
+    <article class="card card--c">
+      <a class="thumb" href="pattern-c.html" target="_blank" rel="noopener" aria-label="C案のページを開く">
+        <div class="thumb__d"><img src="compare/c-desktop.jpg" width="1360" height="880" alt="C案 パソコン表示"></div>
+        <div class="thumb__m"><img src="compare/c-mobile.jpg" width="780" height="1560" alt="C案 スマホ表示"></div>
+      </a>
+      <div class="card__body">
+        <p class="card__tag"><b>C</b><span>モダン・道具好き向け</span></p>
+        <h2>FIELD SPEC<small>フィールド スペック ／ by Golfer's工房</small></h2>
+        <p class="card__copy">試打室の30球より、本番の18ホール。</p>
+        <p class="card__desc">シャフトレンタルを前面に出す案。数字とデータで語る、引き締まった印象。競技志向や道具好きの新しいお客様を、広い範囲から呼びます。</p>
+        <dl>
+          <dt>主役</dt><dd>シャフトレンタル</dd>
+          <dt>向ける相手</dt><dd>30〜40代の道具好き・競技志向</dd>
+          <dt>プラン名</dt><dd>CHECK／CREW／PIT／WORKS</dd>
+        </dl>
+        <a class="card__btn" href="pattern-c.html" target="_blank" rel="noopener">C案を開く →</a>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<section class="sec">
+  <div class="wrap">
+    <h2>ちがいを一覧で</h2>
+    <p class="lede">見た目の好みだけでなく、「どんなお客様と毎日向き合いたいか」で選ぶのがおすすめです。</p>
+    <div class="tblwrap">
+      <table>
+        <thead>
+          <tr><th scope="col"></th><th scope="col"><span>A</span>誂 ATSURAE</th><th scope="col"><span>B</span>メンバーズ</th><th scope="col"><span>C</span>FIELD SPEC</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">呼びたいお客様</th>
+            <td>50〜60代のベテラン。道具にこだわりがあり、量販店の売り込みに疲れた方</td>
+            <td>いまの常連と、そのご紹介。近所のゴルフ好き全般</td>
+            <td>30〜40代の道具好き・競技志向。シャフトを自分で選びたい方</td></tr>
+          <tr><th scope="row">入口の主役</th>
+            <td><b>月額会員</b>（かかりつけ会員）</td>
+            <td><b>クラブカルテ</b>（十四本の定期点検）</td>
+            <td><b>シャフトレンタル</b>（7泊8日）</td></tr>
+          <tr><th scope="row">職人の見え方</th>
+            <td>仕立ての職人</td>
+            <td>道具の主治医</td>
+            <td>技術者・ピットクルー</td></tr>
+          <tr><th scope="row">いまのお客様との<br>つながり</th>
+            <td class="col-a"><span class="dots">●●○</span>別の入口として独立。常連の方には説明が必要</td>
+            <td class="col-b"><span class="dots">●●●</span>ロゴ・色・口調を継承。違和感なく上がれる</td>
+            <td class="col-c"><span class="dots">●○○</span>見た目も口調も別物。新しいお客様向け</td></tr>
+          <tr><th scope="row">最上位プラン（月165,000円）<br>は何への対価か</th>
+            <td>自分のためだけに時間を空けてくれる職人がいること</td>
+            <td>道具のことを全部まかせられる気楽さ</td>
+            <td>練習場とコースの両方で詰められる体制</td></tr>
+          <tr><th scope="row">色・書体</th>
+            <td><span class="sw"><i style="background:#F3EFE6"></i><i style="background:#1F2E46"></i><i style="background:#8E7044"></i></span>生成り・藍・真鍮／明朝の縦組み</td>
+            <td><span class="sw"><i style="background:#FBF8F1"></i><i style="background:#0F5132"></i><i style="background:#D06A1F"></i></span>クリーム・深緑・橙／丸ゴシック</td>
+            <td><span class="sw"><i style="background:#121416"></i><i style="background:#ECEAE4"></i><i style="background:#FF5B1F"></i></span>チャコール・オレンジ／太ゴシックと数字</td></tr>
+          <tr><th scope="row">写真の扱い</th>
+            <td>モノクロの小さな図版。手元の写真が中心</td>
+            <td>カラーのまま。職人の顔を前面に</td>
+            <td>モノクロ高コントラスト。数字と図が主役</td></tr>
+          <tr><th scope="row">向いているのは</th>
+            <td>高級路線をはっきり打ち出したい。会員を本命にして単価を上げたい</td>
+            <td>ブランドを分けたくない。常連を会員に上げることを優先したい</td>
+            <td>レンタルを新事業の柱にしたい。検索やSNSで新規を広く取りたい</td></tr>
+          <tr class="warn"><th scope="row">気をつけたい点</th>
+            <td>お店の気さくな雰囲気とページの重厚さに差が出る。来店時の印象を揃える工夫が要る</td>
+            <td>特別感が弱く、月9,900円以上が割高に見えやすい。「高級路線」の狙いからは一番遠い</td>
+            <td>単発のレンタル客や細かい数値の要望が増え、会員に育たないまま手間だけ増える恐れ。在庫の用意も先に要る</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hint">スマホでは表を横にスクロールできます。</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <h2>3案共通のサービス内容（仮案）</h2>
+    <p class="lede">数字はすべて、たたき台です。プラン名だけが案ごとに変わります。月額会員のねらいは会費そのものより、月に一度は工房に寄っていただく習慣をつくることです。「メンテナンスとは何をするのか」の説明も、3案すべてに入れています。</p>
+    <div class="spec">
+      <div class="box">
+        <h3>シャフトレンタル（7泊8日・税込）</h3>
+        <dl>
+          <dt>二本くらべ</dt><dd>5,500円</dd>
+          <dt>一本</dt><dd>3,300円</dd>
+          <dt>特選シャフト 一本</dt><dd>5,500円</dd>
+          <dt>延長（1日）</dt><dd>550円</dd>
+          <dt>購入時の充当</dt><dd>上限5,500円</dd>
+        </dl>
+      </div>
+      <div class="box">
+        <h3>月額会員（月3,300円〜165,000円）</h3>
+        <div class="tiers">
+          <div><b>3,300円<small>入口のプラン</small></b><span>いつ持ってきても点検／ロフト・ライ角調整の工賃／鉛調整の工賃／クラブカルテ作成／LINE相談</span></div>
+          <div><b>9,900円<small>おすすめ</small></b><span>上記に加えて：十四本まるごと点検 年4回／グリップ交換工賃 年14本／レンタル 年2回／コンペ前仕上げ</span></div>
+          <div><b>26,400円<small>定員10名</small></b><span>上記に加えて：レンタル 毎月1回／出張計測 年2回／引取り・お届け 月1回／リシャフト工賃半額／入荷品の先行案内</span></div>
+          <div><b>165,000円<small>最上位・定員3名</small></b><span>上記に加えて：出張計測 毎月／ラウンド帯同 年2回／レンタルシャフト常時2本／リシャフト工賃無料／グリップ全交換 年1回（部材込み）／時間外貸切・特急仕上げ／引取り・お届け随時／予備クラブ預かり</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <h2>決めていただきたいこと</h2>
+    <p class="lede">案を選んでいただいたあと、次の点を確認して本番用に仕上げます。</p>
+    <ol class="todo">
+      <li><b>どの方向で進めるか</b><span>「Aの見た目にCのコピー」のような組み合わせもできます。</span></li>
+      <li><b>名前</b><span>誂／メンバーズ／FIELD SPEC はいずれも仮称です。</span></li>
+      <li><b>料金とプランの中身</b><span>レンタル料と会員の月額。とくに月3,300円のプランで、調整を回数無制限にするか、月1回などの上限を置くか。月165,000円の最上位プランは、ラウンド帯同と時間外対応を実際に引き受けられるか。</span></li>
+      <li><b>工房の体制と書き方</b><span>作業される方の人数と、写真の方の肩書き。いまは「職人」とだけ書いています。</span></li>
+      <li><b>いまのメニューとの整合</b><span>現行サイトの「出張アドバイス 1時間1,000円」「3,000円以上で引取り・お届け」は、会員特典と重なります。どちらかの見直しが必要です。</span></li>
+      <li><b>LINE公式アカウントのURL</b><span>相談ボタンの行き先に使います。いまは仮のリンクです。</span></li>
+      <li><b>写真</b><span>いまは現行サイトの写真（移転前の店内を含む）を小さく使っています。新店舗での撮り直しをおすすめします。</span></li>
+      <li><b>お店の表記</b><span>蓮根駅からの徒歩分数、現行サイトのフッターに残っている旧住所（蓮根2-12-17）の扱い。</span></li>
+      <li><b>店頭での施策（LPとは別に）</b><span>ポイントカードの見直し、クラブ拭きタオル、くじなど。会員の案内とあわせて検討できます。</span></li>
+      <li><b>掲載するお客様の声</b><span>現行サイトの3件を原文のまま載せています。掲載を続けてよいかご確認ください。</span></li>
+    </ol>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">検討用の資料です。名称・料金・サービス内容はすべて仮案で、公開前のものです。</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>誂 ATSURAE｜ゴルファーズ工房のかかりつけプログラム（板橋・蓮根）</title>
+<meta name="description" content="十四本に、かかりつけの職人を。東京・板橋区蓮根のゴルファーズ工房による、一週間シャフトレンタルと、月額のクラブメンテナンス会員。">
+<meta name="format-detection" content="telephone=no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3EFE6;
+  --paper-2:#E9E4D8;
+  --card:#FBF9F4;
+  --ink:#191D23;
+  --ink-2:#3B414B;
+  --muted:#666B74;
+  --indigo:#1F2E46;
+  --indigo-deep:#141D2E;
+  --brass:#8E7044;
+  --brass-light:#C4AB7D;
+  --line:rgba(25,29,35,.18);
+  --line-soft:rgba(25,29,35,.09);
+  --line-on-dark:rgba(243,239,230,.2);
+  --mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho","YuMincho",serif;
+  --gothic:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
+  --mono:"DM Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --wrap:1120px;
+  --gutter:clamp(20px,5vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--gothic);font-size:16px;line-height:1.95;letter-spacing:.04em;
+  font-feature-settings:"palt";-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,dl,dd,figure,blockquote{margin:0}
+ul,ol{padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+.karte>*,.rent>*,.phil>*,.contact>*,.regular>*,.tiers>*,.works>*,.hero__grid>*{min-width:0}
+.mono{font-family:var(--mono);letter-spacing:.06em;font-feature-settings:normal}
+.nowrap{white-space:nowrap}
+
+/* ---------- draft strip ---------- */
+.draft{background:var(--ink);color:#D9D3C4;font-size:11.5px;letter-spacing:.14em;text-align:center;padding:7px 16px;line-height:1.5}
+
+/* ---------- header ---------- */
+.head{position:sticky;top:0;z-index:20;background:rgba(243,239,230,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-soft)}
+.head__in{display:flex;align-items:center;justify-content:space-between;gap:20px;height:68px}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none}
+.seal{
+  width:38px;height:38px;flex:none;display:grid;place-items:center;
+  border:1.5px solid var(--indigo);border-radius:7px;
+  font-family:var(--mincho);font-weight:700;font-size:22px;line-height:1;color:var(--indigo);letter-spacing:0;
+}
+.mark__txt{display:flex;flex-direction:column;line-height:1.25}
+.mark__name{font-family:var(--mono);font-size:13px;letter-spacing:.3em;color:var(--ink)}
+.mark__by{font-size:10.5px;letter-spacing:.1em;color:var(--muted)}
+.nav{display:flex;align-items:center;gap:clamp(14px,2.2vw,30px);font-size:13px}
+.nav a{text-decoration:none;color:var(--ink-2);white-space:nowrap}
+.nav a:hover{color:var(--brass)}
+.nav__links{display:none;gap:clamp(14px,2.2vw,30px)}
+@media (min-width:900px){.nav__links{display:flex}}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.7em;
+  min-height:52px;padding:0 28px;border:1px solid var(--indigo);
+  background:var(--indigo);color:var(--paper)!important;text-decoration:none;
+  font-size:14.5px;font-weight:500;letter-spacing:.12em;white-space:nowrap;
+  transition:background .25s,color .25s,border-color .25s;
+}
+.btn:hover{background:var(--indigo-deep)}
+.btn--ghost{background:transparent;color:var(--indigo)!important}
+.btn--ghost:hover{background:var(--indigo);color:var(--paper)!important}
+.btn--sm{min-height:40px;padding:0 18px;font-size:12.5px}
+.btn--light{background:var(--paper);color:var(--indigo-deep)!important;border-color:var(--paper)}
+.btn--light:hover{background:#fff}
+.btn--line-light{background:transparent;border-color:var(--line-on-dark);color:var(--paper)!important}
+.btn--line-light:hover{background:rgba(243,239,230,.1)}
+.btn .arr{font-family:var(--mono);letter-spacing:0}
+
+/* ---------- plates (photos) ---------- */
+.plate{position:relative;background:var(--card);padding:7px;border:1px solid var(--line);box-shadow:0 14px 30px -18px rgba(20,29,46,.45)}
+.plate__img{position:relative;overflow:hidden;background:#222}
+.plate__img img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1) brightness(.97) sepia(.14)}
+.plate__img::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.34;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .9 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
+}
+.plate figcaption{display:flex;gap:.9em;align-items:baseline;padding:8px 2px 2px;font-size:11.5px;color:var(--muted);line-height:1.5;letter-spacing:.08em}
+.plate figcaption b{font-family:var(--mono);font-weight:400;color:var(--brass);letter-spacing:.1em;white-space:nowrap}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:clamp(36px,6vw,76px) 0 clamp(56px,8vw,104px)}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px 20px;align-items:start}
+.hero__eyebrow{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.4em 1.4em;font-size:12px;letter-spacing:.2em;color:var(--ink-2);padding-bottom:14px;border-bottom:1px solid var(--line)}
+.hero__eyebrow span+span::before{content:"／";margin-right:1.4em;color:var(--brass)}
+.hero__title{
+  grid-column:2;grid-row:2;
+  writing-mode:vertical-rl;text-orientation:upright;
+  font-family:var(--mincho);font-weight:600;
+  font-size:clamp(2.3rem,10.5vw,5.4rem);line-height:1.42;letter-spacing:.14em;
+  font-feature-settings:normal;color:var(--ink);
+}
+.hero__title span{display:block}
+.hero__title span:nth-child(2){margin-top:1.15em}
+.hero__title span:nth-child(3){margin-top:2.3em}
+.hero__plates{grid-column:1;grid-row:2;position:relative;align-self:end;padding-bottom:44px;max-width:360px}
+.hero__plates .plate--a .plate__img{aspect-ratio:1/1}
+.hero__plates .plate--b{position:absolute;right:-8px;bottom:0;width:46%}
+.hero__plates .plate--b .plate__img{aspect-ratio:1/1}
+.hero__copy{grid-column:1/-1;max-width:34em}
+@media (max-width:899px){.hero__plates .plate--a figcaption{display:none}}
+.hero__lead{font-family:var(--mincho);font-weight:500;font-size:clamp(1.02rem,2.2vw,1.2rem);line-height:2.1;letter-spacing:.08em}
+.hero__sub{margin-top:14px;font-size:14px;color:var(--ink-2)}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+@media (min-width:900px){
+  .hero__grid{grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto 1fr;gap:0 clamp(40px,6vw,88px)}
+  .hero__eyebrow{margin-bottom:44px}
+  .hero__title{grid-column:2;grid-row:2/4;font-size:clamp(3.6rem,5.4vw,4.7rem)}
+  .hero__copy{grid-column:1;grid-row:2;align-self:start;padding-top:6px}
+  .hero__plates{grid-column:1;grid-row:3;align-self:end;margin-top:52px;max-width:none;width:min(100%,560px);padding-bottom:0;display:grid;grid-template-columns:1.45fr 1fr;gap:18px;align-items:end}
+  .hero__plates .plate--a .plate__img{aspect-ratio:4/3}
+  .hero__plates .plate--b{position:static;width:auto;margin-bottom:34px}
+}
+.facts{margin-top:clamp(40px,6vw,72px);display:grid;grid-template-columns:1fr;border-top:1px solid var(--ink)}
+.facts li{display:flex;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.facts .num{font-family:var(--mono);font-size:clamp(1.7rem,3.4vw,2.3rem);line-height:1;letter-spacing:0;color:var(--indigo);min-width:3.2em}
+.facts .num small{font-family:var(--gothic);font-size:.42em;margin-left:.3em;letter-spacing:.1em}
+.facts .txt{font-size:13.5px;line-height:1.7;color:var(--ink-2)}
+@media (min-width:760px){
+  .facts{grid-template-columns:repeat(3,1fr)}
+  .facts li{flex-direction:column;gap:10px;padding:22px 24px 4px 0;border-bottom:0}
+  .facts li+li{padding-left:24px;border-left:1px solid var(--line)}
+}
+
+/* ---------- sections ---------- */
+.sec{padding:clamp(72px,10vw,136px) 0}
+.sec--tint{background:var(--paper-2)}
+.sec--dark{background:var(--indigo-deep);color:var(--paper)}
+.label{display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.26em;color:var(--brass);margin-bottom:22px}
+.label::before{content:"";width:34px;height:1px;background:currentColor}
+.sec--dark .label{color:var(--brass-light)}
+.h2{font-family:var(--mincho);font-weight:600;font-size:clamp(1.6rem,4.3vw,2.6rem);line-height:1.6;letter-spacing:.09em;font-feature-settings:normal}
+.lede{margin-top:26px;max-width:36em;color:var(--ink-2);font-size:15.5px}
+.sec--dark .lede{color:rgba(243,239,230,.8)}
+.lede p+p{margin-top:1.2em}
+
+/* philosophy */
+.phil{display:grid;gap:44px}
+@media (min-width:900px){.phil{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:72px;align-items:start}}
+.phil__aside{display:grid;gap:22px;max-width:330px}
+.phil__aside .plate__img{aspect-ratio:330/250}
+.sign{font-size:13px;color:var(--muted);line-height:1.8}
+.grounds{margin-top:clamp(52px,7vw,88px);display:grid;gap:0;border-top:1px solid var(--ink)}
+.grounds li{display:grid;grid-template-columns:3.2em minmax(0,1fr);gap:6px 14px;padding:30px 0;border-bottom:1px solid var(--line)}
+.grounds .k{font-family:var(--mincho);font-size:1.5rem;line-height:1.5;color:var(--brass)}
+.grounds h3{font-family:var(--mincho);font-weight:600;font-size:clamp(1.12rem,2.4vw,1.4rem);line-height:1.7;letter-spacing:.08em}
+.grounds p{grid-column:2;color:var(--ink-2);font-size:15px;max-width:40em}
+@media (min-width:900px){
+  .grounds li{grid-template-columns:4em minmax(0,.8fr) minmax(0,1.2fr);gap:0 36px;align-items:baseline;padding:38px 0}
+  .grounds p{grid-column:3}
+}
+
+/* rental */
+.origin{margin-top:40px;padding:26px 28px;border-left:2px solid var(--brass);background:var(--card);max-width:46em}
+.origin blockquote{font-family:var(--mincho);font-size:15.5px;line-height:2.05;letter-spacing:.06em}
+.origin cite{display:block;margin-top:10px;font-style:normal;font-size:12px;color:var(--muted);letter-spacing:.12em}
+.rent{margin-top:clamp(48px,6vw,76px);display:grid;gap:48px}
+@media (min-width:940px){.rent{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:start}}
+.steps{counter-reset:s;border-top:1px solid var(--ink)}
+.steps li{display:grid;grid-template-columns:3em minmax(0,1fr);gap:0 12px;padding:22px 0;border-bottom:1px solid var(--line)}
+.steps .k{font-family:var(--mincho);font-size:1.3rem;color:var(--brass);line-height:1.6}
+.steps h3{font-family:var(--mincho);font-weight:600;font-size:1.12rem;letter-spacing:.08em;line-height:1.7}
+.steps p{grid-column:2;font-size:14.5px;color:var(--ink-2)}
+.rent__plates{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;margin-top:30px;align-items:start;max-width:520px}
+.rent__plates .plate:nth-child(1) .plate__img{aspect-ratio:330/250}
+.rent__plates .plate:nth-child(2) .plate__img{aspect-ratio:1/1}
+.tariff{background:var(--card);border:1px solid var(--line);padding:clamp(22px,3vw,36px)}
+.tariff h3{font-family:var(--mincho);font-weight:600;font-size:1.15rem;letter-spacing:.12em;padding-bottom:14px;border-bottom:1px solid var(--ink)}
+.tariff dl{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 18px}
+.tariff dt,.tariff dd{padding:16px 0;border-bottom:1px solid var(--line)}
+.tariff dt{font-size:14.5px;line-height:1.7}
+.tariff dt small{display:block;font-size:12px;color:var(--muted)}
+.tariff dd{font-family:var(--mono);font-size:1.25rem;letter-spacing:0;display:flex;align-items:center;justify-content:flex-end;white-space:nowrap}
+.tariff dd small{font-family:var(--gothic);font-size:11px;margin-left:.3em;letter-spacing:.08em;color:var(--muted)}
+.terms{margin-top:22px;display:grid;gap:10px;font-size:13.5px;color:var(--ink-2);line-height:1.8}
+.terms li{padding-left:1.4em;position:relative}
+.terms li::before{content:"";position:absolute;left:0;top:.82em;width:.8em;height:1px;background:var(--brass)}
+
+/* karte */
+.karte{display:grid;gap:48px}
+@media (min-width:1000px){.karte{grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:64px;align-items:start}}
+.measures{margin-top:34px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;border-top:1px solid var(--line-on-dark);font-size:13.5px}
+.measures li{padding:11px 0;border-bottom:1px solid var(--line-on-dark);display:flex;justify-content:space-between;gap:10px;color:rgba(243,239,230,.85)}
+.measures li span{font-family:var(--mono);font-size:11px;color:var(--brass-light);letter-spacing:.1em}
+.sheet{background:var(--card);color:var(--ink);padding:clamp(18px,3vw,34px);box-shadow:0 30px 60px -30px rgba(0,0,0,.7);position:relative}
+.sheet__head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding-bottom:14px;border-bottom:1.5px solid var(--ink)}
+.sheet__title{font-family:var(--mincho);font-weight:700;font-size:1.25rem;letter-spacing:.3em;line-height:1.3}
+.sheet__title small{display:block;font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.24em;color:var(--muted);margin-top:4px}
+.sheet__stamp{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--brass);border:1px solid var(--brass);padding:3px 9px;line-height:1.5;transform:rotate(-3deg);white-space:nowrap}
+.sheet__meta{display:flex;flex-wrap:wrap;gap:4px 26px;padding:12px 0;font-size:11.5px;color:var(--ink-2);border-bottom:1px solid var(--line);line-height:1.7}
+.sheet__meta b{font-family:var(--mono);font-weight:400;margin-left:.6em}
+.sheet__scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.sheet table{width:100%;min-width:500px;border-collapse:collapse;font-family:var(--mono);font-size:12.5px;letter-spacing:0;font-feature-settings:"tnum"}
+.sheet th{font-family:var(--gothic);font-weight:500;font-size:10.5px;letter-spacing:.08em;color:var(--muted);text-align:right;padding:10px 8px 8px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.sheet th:first-child,.sheet td:first-child{text-align:left;padding-left:2px}
+.sheet td{text-align:right;padding:6px 8px;border-bottom:1px solid var(--line-soft);line-height:1.5;white-space:nowrap}
+.sheet td:first-child{font-weight:500;color:var(--indigo)}
+.sheet tr.flag td{background:rgba(142,112,68,.11)}
+@media (max-width:620px){.sheet table{min-width:0;font-size:12px}.sheet th:nth-child(n+6),.sheet td:nth-child(n+6){display:none}.sheet th,.sheet td{padding-left:4px;padding-right:4px}}
+.sheet .hit{color:#7A4B12;font-weight:500;box-shadow:inset 0 -1.5px 0 var(--brass)}
+.flow{margin-top:20px;padding-top:14px;border-top:1px solid var(--line)}
+.flow__t{display:flex;justify-content:space-between;gap:12px;font-size:11px;color:var(--muted);letter-spacing:.1em;margin-bottom:4px}
+.flow svg{width:100%;height:auto;display:block;overflow:visible}
+.findings{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;line-height:1.85;color:var(--ink-2)}
+.findings b{font-family:var(--mincho);font-weight:600;letter-spacing:.2em;color:var(--ink);margin-right:.8em}
+.findings li{padding-left:1.2em;position:relative}
+.findings li::before{content:"・";position:absolute;left:0;color:var(--brass)}
+
+/* membership */
+.tiers{margin-top:clamp(52px,6vw,80px);display:grid;gap:18px}
+@media (min-width:940px){.tiers{grid-template-columns:repeat(3,minmax(0,1fr));gap:0;align-items:stretch}}
+.tier{background:var(--card);border:1px solid var(--line);padding:clamp(26px,3vw,38px) clamp(22px,2.6vw,32px);display:flex;flex-direction:column}
+@media (min-width:940px){.tier+.tier{border-left:0}.tier--main{margin:-18px 0;border-left:1px solid var(--indigo)!important}}
+.tier--main{background:var(--indigo);color:var(--paper);border-color:var(--indigo)}
+.tier__cap{font-size:11.5px;letter-spacing:.18em;color:var(--brass);display:flex;justify-content:space-between;gap:10px}
+.tier--main .tier__cap{color:var(--brass-light)}
+.tier__name{font-family:var(--mincho);font-weight:600;font-size:2.3rem;line-height:1.3;letter-spacing:.2em;margin-top:16px;font-feature-settings:normal}
+.tier__name small{display:block;font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.3em;color:var(--muted);margin-top:6px}
+.tier--main .tier__name small{color:rgba(243,239,230,.6)}
+.tier__for{margin-top:16px;font-size:13.5px;line-height:1.85;min-height:5.2em;color:var(--ink-2)}
+.tier--main .tier__for{color:rgba(243,239,230,.84)}
+.tier__price{margin-top:14px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:8px}
+.tier--main .tier__price{border-color:var(--line-on-dark)}
+.tier__price .yen{font-family:var(--mono);font-size:2rem;letter-spacing:0;line-height:1.2}
+.tier__price small{font-size:11.5px;letter-spacing:.1em;color:var(--muted)}
+.tier--main .tier__price small{color:rgba(243,239,230,.65)}
+.tier__inc{margin-top:18px;font-size:12px;letter-spacing:.12em;color:var(--muted)}
+.tier--main .tier__inc{color:rgba(243,239,230,.65)}
+.tier ul{margin-top:10px;display:grid;gap:9px;font-size:14px;line-height:1.75}
+.tier li{padding-left:1.5em;position:relative}
+.tier li::before{content:"";position:absolute;left:.1em;top:.72em;width:.75em;height:1px;background:var(--brass)}
+.tier--main li::before{background:var(--brass-light)}
+.tier li small{font-size:12px;color:var(--muted)}
+.tier--main li small{color:rgba(243,239,230,.6)}
+.tiers__note{margin-top:34px;display:grid;gap:8px;font-size:13px;color:var(--ink-2);max-width:54em;line-height:1.85}
+.tiers__note li{padding-left:1.2em;position:relative}
+.tiers__note li::before{content:"※";position:absolute;left:0;color:var(--brass)}
+.why{margin-top:clamp(48px,6vw,72px);display:grid;gap:18px;padding:clamp(24px,3.4vw,40px);border:1px solid var(--line);background:var(--card)}
+@media (min-width:860px){.why{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:48px;align-items:start}}
+.why h3{font-family:var(--mincho);font-weight:600;font-size:1.3rem;line-height:1.75;letter-spacing:.1em}
+.why p{font-size:14.5px;color:var(--ink-2)}
+.care{margin-top:clamp(40px,5vw,60px)}
+.care__h{font-family:var(--mincho);font-weight:600;font-size:1.3rem;letter-spacing:.12em;padding-bottom:16px;border-bottom:1px solid var(--ink)}
+.care ol{display:grid}
+@media (min-width:860px){.care ol{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.care li{padding:22px 0;border-bottom:1px solid var(--line)}
+@media (min-width:860px){.care li{padding:26px 28px 6px 0;border-bottom:0}.care li+li{padding-left:28px;border-left:1px solid var(--line)}}
+.care h4{margin:0;font-family:var(--mincho);font-weight:600;font-size:1.08rem;letter-spacing:.08em;line-height:1.7}
+.care h4 span{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--brass);display:block}
+.care p{font-size:14px;color:var(--ink-2);line-height:1.9;margin-top:6px}
+.bespoke{margin-top:22px;background:var(--indigo-deep);color:var(--paper);padding:clamp(28px,4vw,48px);display:grid;gap:30px;border-top:2px solid var(--brass-light)}
+@media (min-width:940px){.bespoke{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:64px;align-items:start}}
+.bespoke__cap{display:flex;gap:18px;font-size:11.5px;letter-spacing:.18em;color:var(--brass-light)}
+.bespoke__name{font-family:var(--mincho);font-weight:600;font-size:clamp(2.4rem,5vw,3.2rem);line-height:1.3;letter-spacing:.2em;margin-top:14px;font-feature-settings:normal}
+.bespoke__name small{display:block;font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.3em;color:rgba(243,239,230,.6);margin-top:6px}
+.bespoke__for{margin-top:18px;font-size:14.5px;line-height:1.95;color:rgba(243,239,230,.85);max-width:26em}
+.bespoke__price{margin-top:22px;padding-top:18px;border-top:1px solid var(--line-on-dark);display:flex;align-items:baseline;gap:10px}
+.bespoke__price .yen{font-family:var(--mono);font-size:clamp(2.2rem,5vw,2.9rem);letter-spacing:0;line-height:1.1;color:var(--brass-light)}
+.bespoke__price small{font-size:12px;letter-spacing:.1em;color:rgba(243,239,230,.65)}
+.bespoke__inc{font-size:12px;letter-spacing:.12em;color:rgba(243,239,230,.65);padding-bottom:12px;border-bottom:1px solid var(--line-on-dark)}
+.bespoke ul{display:grid;gap:0;font-size:14.5px;line-height:1.75}
+@media (min-width:640px){.bespoke ul{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:32px}}
+.bespoke li{padding:13px 0 13px 1.5em;position:relative;border-bottom:1px solid var(--line-on-dark)}
+.bespoke li::before{content:"";position:absolute;left:.1em;top:1.45em;width:.75em;height:1px;background:var(--brass-light)}
+.bespoke li small{display:block;font-size:12px;color:rgba(243,239,230,.6)}
+
+/* year */
+.year{margin-top:clamp(52px,7vw,84px)}
+.year__h{font-family:var(--mincho);font-weight:600;font-size:1.3rem;letter-spacing:.12em;padding-bottom:16px;border-bottom:1px solid var(--ink)}
+.year ol{display:grid}
+@media (min-width:860px){.year ol{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.year li{padding:24px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:3.4em minmax(0,1fr);gap:4px 12px}
+@media (min-width:860px){
+  .year li{display:block;padding:26px 24px 8px 0;border-bottom:0}
+  .year li+li{padding-left:24px;border-left:1px solid var(--line)}
+}
+.year .s{font-family:var(--mincho);font-weight:600;font-size:2rem;line-height:1.2;color:var(--indigo)}
+.year .m{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--brass);display:block;margin-top:2px}
+.year h4{margin:0;font-family:var(--mincho);font-weight:600;font-size:1.02rem;letter-spacing:.08em;line-height:1.7}
+.year p{font-size:13.5px;color:var(--ink-2);line-height:1.85;margin-top:4px}
+@media (min-width:860px){.year h4{margin-top:14px}}
+@media (max-width:859px){.year h4,.year p{grid-column:2}.year .sm{grid-row:1/3}}
+
+/* works */
+.works{margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.works .w1,.works .w6{grid-column:1/-1}
+.works .w1 .plate__img,.works .w6 .plate__img{aspect-ratio:1096/590}
+.works .sq .plate__img{aspect-ratio:1/1}
+@media (max-width:859px){.works .w3{display:none}}
+@media (min-width:860px){
+  .works{grid-template-columns:repeat(12,minmax(0,1fr));gap:26px 22px;align-items:start}
+  .works .w1{grid-column:1/8}
+  .works .w2{grid-column:8/11;margin-top:64px}
+  .works .w3{grid-column:11/13}
+  .works .w4{grid-column:2/5}
+  .works .w5{grid-column:5/8;margin-top:44px}
+  .works .w6{grid-column:8/13;margin-top:-40px}
+}
+
+/* voices */
+.voices{margin-top:clamp(40px,5vw,60px);display:grid;gap:0;border-top:1px solid var(--ink)}
+.voices li{padding:32px 0;border-bottom:1px solid var(--line);display:grid;gap:12px}
+@media (min-width:860px){.voices li{grid-template-columns:minmax(0,.36fr) minmax(0,1fr);gap:48px;padding:40px 0}}
+.voices h3{font-family:var(--mincho);font-weight:600;font-size:1.2rem;line-height:1.75;letter-spacing:.08em}
+.voices p{font-size:15px;color:var(--ink-2);max-width:42em}
+.src{margin-top:18px;font-size:12px;color:var(--muted);letter-spacing:.1em}
+
+/* regular menu */
+.regular{display:grid;gap:36px}
+@media (min-width:900px){.regular{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center}}
+.regular dl{display:grid;grid-template-columns:minmax(0,1fr) auto;border-top:1px solid var(--ink)}
+.regular dt,.regular dd{padding:15px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.regular dd{font-family:var(--mono);text-align:right;letter-spacing:0}
+.regular dd small{font-family:var(--gothic);font-size:11px;color:var(--muted);margin-left:.3em}
+.textlink{display:inline-flex;gap:.6em;align-items:center;margin-top:24px;font-size:14px;text-decoration:none;border-bottom:1px solid var(--brass);padding-bottom:3px;color:var(--indigo)}
+.textlink:hover{color:var(--brass)}
+
+/* faq */
+.faq{margin-top:clamp(36px,5vw,56px);border-top:1px solid var(--ink);max-width:860px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;position:relative;font-family:var(--mincho);font-weight:600;font-size:1.05rem;letter-spacing:.07em;line-height:1.8}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";position:absolute;right:4px;top:22px;font-family:var(--gothic);font-weight:400;color:var(--brass);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 24px;font-size:14.5px;color:var(--ink-2);max-width:44em}
+
+/* contact */
+.contact{display:grid;gap:52px}
+@media (min-width:940px){.contact{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:80px;align-items:start}}
+.contact__cta{display:grid;gap:12px;margin-top:34px;max-width:420px}
+.contact__cta .btn{width:100%;justify-content:space-between}
+.contact__hint{margin-top:16px;font-size:12.5px;color:rgba(243,239,230,.66);line-height:1.85;max-width:34em}
+.shop{border-top:1px solid var(--line-on-dark)}
+.shop div{display:grid;grid-template-columns:6em minmax(0,1fr);gap:12px;padding:17px 0;border-bottom:1px solid var(--line-on-dark);font-size:14.5px;line-height:1.85}
+.shop dt{font-size:12px;letter-spacing:.2em;color:var(--brass-light);padding-top:.2em}
+.shop dd a{text-underline-offset:4px;text-decoration-color:var(--brass-light)}
+.shop .tel{font-family:var(--mono);font-size:1.35rem;letter-spacing:.02em;text-decoration:none}
+
+.foot{background:var(--indigo-deep);color:rgba(243,239,230,.6);border-top:1px solid var(--line-on-dark);padding:28px 0 36px;font-size:12px;letter-spacing:.1em}
+.foot__in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px}
+.foot a{text-underline-offset:4px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<p class="draft">検討用ドラフト｜名称・料金・サービス内容はすべて仮案です</p>
+
+<header class="head">
+  <div class="wrap head__in">
+    <a class="mark" href="#top" aria-label="誂 ATSURAE by ゴルファーズ工房">
+      <span class="seal" aria-hidden="true">誂</span>
+      <span class="mark__txt">
+        <span class="mark__name">ATSURAE</span>
+        <span class="mark__by">by Golfer's工房</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="ページ内">
+      <span class="nav__links">
+        <a href="#philosophy">考え方</a>
+        <a href="#rental">一週間シャフト</a>
+        <a href="#karte">クラブカルテ</a>
+        <a href="#membership">かかりつけ会員</a>
+        <a href="#shop">店舗</a>
+      </span>
+      <a class="btn btn--sm" href="#contact">相談する</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- =============== HERO =============== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__grid">
+      <p class="hero__eyebrow"><span>東京・板橋　蓮根</span><span>職人の工房による月額会員プログラム</span></p>
+
+      <h1 class="hero__title"><span>十四本に、</span><span>かかりつけの</span><span>職人を。</span></h1>
+
+      <div class="hero__plates">
+        <figure class="plate plate--a">
+          <div class="plate__img"><img src="img/ga2.jpg" width="340" height="340" alt="ライ角調整機でアイアンのネックを曲げる職人の手"></div>
+          <figcaption><b>FIG.01</b>ライ角を合わせる</figcaption>
+        </figure>
+        <figure class="plate plate--b">
+          <div class="plate__img"><img src="img/ga4.jpg" width="340" height="340" alt="計測器にシャフトを載せて測る手元"></div>
+        </figure>
+      </div>
+
+      <div class="hero__copy">
+        <p class="hero__lead">豪華なスタジオでも、売り込む量販店でもない。<br>いつもの練習場と、あなたの十四本を、<br>同じ職人が診つづけます。</p>
+        <p class="hero__sub">誂（あつらえ）は、板橋・蓮根のゴルファーズ工房がはじめる、シャフトレンタルと年間クラブ管理のプログラムです。</p>
+        <div class="hero__cta">
+          <a class="btn" href="#contact">まずは相談する <span class="arr">→</span></a>
+          <a class="btn btn--ghost" href="#membership">会員プランを見る</a>
+        </div>
+      </div>
+    </div>
+
+    <ul class="facts">
+      <li><span class="num">7<small>泊</small>8<small>日</small></span><span class="txt">気になるシャフトを一週間。<br>練習場でも、コースでも。</span></li>
+      <li><span class="num">14<small>本</small></span><span class="txt">全番手を計測して一冊のカルテに。<br>季節ごとに診なおします。</span></li>
+      <li><span class="num">3,300<small>円〜</small></span><span class="txt">月額会員。いつ持ってきても、<br>点検と調整をします。</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- =============== PHILOSOPHY =============== -->
+<section class="sec sec--tint" id="philosophy">
+  <div class="wrap">
+    <div class="phil">
+      <div class="rv">
+        <p class="label">考え方</p>
+        <h2 class="h2">安くしてきたのには、<br>理由があります。</h2>
+        <div class="lede">
+          <p>グリップ交換は一本三三〇円から。手入れを先延ばしにしてほしくないから、この工房は工賃を抑えてきました。それは、これからも変わりません。</p>
+          <p>ただ、長く道具を診ていると、交換や修理の「その先」を頼まれることが増えてきます。十四本の流れを揃えたい。買う前に、コースで確かめたい。誰か一人に、ずっと診ていてほしい。</p>
+          <p>誂は、その声に応えるためにつくった、もうひとつの入口です。</p>
+        </div>
+      </div>
+      <div class="phil__aside rv">
+        <figure class="plate">
+          <div class="plate__img"><img src="img/sp3.jpg" width="330" height="250" alt="工房に立つデニムエプロン姿の職人"></div>
+          <figcaption><b>FIG.02</b>工房の職人</figcaption>
+        </figure>
+        <p class="sign">測った職人が、そのまま組んで、<br>お渡しします。</p>
+      </div>
+    </div>
+
+    <ol class="grounds">
+      <li class="rv">
+        <span class="k">一</span>
+        <h3>室内の三十球ではなく、<br>いつもの練習場で。</h3>
+        <p>工房に試打室はありません。代わりに、弾道測定器を持ってあなたの練習場へ伺います。シャフトは一週間お貸しします。いつもの打席、いつものボール、できれば本番のコースで。決めるのは、そのあとで構いません。</p>
+      </li>
+      <li class="rv">
+        <span class="k">二</span>
+        <h3>買い替えを勧めるのが、<br>仕事ではありません。</h3>
+        <p>合っているなら「そのままで」と申し上げます。鉛を二グラム貼るだけで済むこともあれば、シャフトを替えたほうがいいこともある。どちらの答えも、同じ重さでお伝えします。</p>
+      </li>
+      <li class="rv">
+        <span class="k">三</span>
+        <h3>測るのも、組むのも、<br>同じ手。</h3>
+        <p>測った職人が、そのまま組みます。だから、去年の調整も、先月のシャフトの感想も、一冊のカルテにつながっていきます。来るたびに、一から説明し直すことはありません。</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- =============== RENTAL =============== -->
+<section class="sec" id="rental">
+  <div class="wrap">
+    <div class="rv">
+      <p class="label">一週間シャフト｜シャフトレンタル</p>
+      <h2 class="h2">決めるのは、<br>コースで打ってから。</h2>
+      <div class="lede">
+        <p>スリーブ付きのドライバー用シャフトを、七泊八日でお貸しします。週末の練習と、ラウンドを一回。それだけあれば、数字ではなく手応えで選べます。</p>
+      </div>
+      <div class="origin">
+        <blockquote>「ここには試打する設備がないのですが、試打用シャフトをお借りし、後日気に入ったものを購入させて頂きました。」</blockquote>
+        <cite>— お客様の声より。一週間シャフトは、この貸し出しを正式な仕組みにしたものです。</cite>
+      </div>
+    </div>
+
+    <div class="rent">
+      <div class="rv">
+        <ol class="steps">
+          <li><span class="k">一</span><h3>相談する</h3><p>いまのドライバーと、気になっている球筋を教えてください。LINEで写真を送っていただくだけでも構いません。</p></li>
+          <li><span class="k">二</span><h3>二本、選ぶ</h3><p>一本だけでは良し悪しが分かりません。職人が候補を絞り、性格のちがう二本をお渡しします。</p></li>
+          <li><span class="k">三</span><h3>一週間、打つ</h3><p>いつもの練習場で、できればコースで。お手持ちのヘッドに、レンチ一本で付け替えられます。</p></li>
+          <li><span class="k">四</span><h3>決める、または決めない</h3><p>気に入れば新しく組みます。合わなければ、返すだけ。別の二本を試すこともできます。</p></li>
+        </ol>
+        <div class="rent__plates">
+          <figure class="plate">
+            <div class="plate__img"><img src="img/sp1.jpg" width="330" height="250" alt="ドライバーヘッドとシャフトを手に持つ職人"></div>
+            <figcaption><b>FIG.03</b>ヘッドに合わせる</figcaption>
+          </figure>
+          <figure class="plate">
+            <div class="plate__img"><img src="img/ga4.jpg" width="340" height="340" alt="計測器に載せたシャフト"></div>
+            <figcaption><b>FIG.04</b>一本ずつ測る</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="tariff rv">
+        <h3>料金</h3>
+        <dl>
+          <dt>二本くらべ<small>おすすめ。性格のちがう二本を同時に</small></dt><dd>5,500<small>円</small></dd>
+          <dt>一本<small>候補が決まっている方に</small></dt><dd>3,300<small>円</small></dd>
+          <dt>特選シャフト 一本<small>高価格帯・入手しにくいモデル</small></dt><dd>5,500<small>円</small></dd>
+          <dt>延長<small>一日あたり</small></dt><dd>550<small>円</small></dd>
+        </dl>
+        <ul class="terms">
+          <li>すべて税込、七泊八日の料金です。</li>
+          <li>返却から30日以内のご注文で、レンタル料をシャフト代金に充当します（上限5,500円）。</li>
+          <li>通常のご使用でつく小傷は、請求しません。折損・紛失の場合のみ、事前にお伝えした上限額の範囲で実費をいただきます。</li>
+          <li>お渡しは店頭、または工房から15km圏内へのお届け。かかりつけ会員は会員枠でご利用いただけます。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== KARTE =============== -->
+<section class="sec sec--dark" id="karte">
+  <div class="wrap">
+    <div class="karte">
+      <div class="rv">
+        <p class="label">クラブカルテ</p>
+        <h2 class="h2">十四本を、<br>一枚で見る。</h2>
+        <div class="lede">
+          <p>一本ずつ買い足したクラブは、たいてい流れのどこかが途切れています。重さ、長さ、硬さ。全番手を同じ台で測って並べると、打ちにくい一本の理由が見えてきます。</p>
+          <p>カルテは工房で保管し、調整のたびに書き足します。あなたの十四本の履歴です。</p>
+        </div>
+        <ul class="measures">
+          <li>ロフト角<span>LOFT</span></li>
+          <li>ライ角<span>LIE</span></li>
+          <li>長さ<span>LENGTH</span></li>
+          <li>総重量<span>WEIGHT</span></li>
+          <li>バランス<span>SWING WT.</span></li>
+          <li>振動数<span>CPM</span></li>
+        </ul>
+      </div>
+
+      <div class="sheet rv" aria-label="クラブカルテの見本">
+        <div class="sheet__head">
+          <p class="sheet__title">クラブカルテ<small>CLUB KARTE — GOLFER'S KOUBOU</small></p>
+          <span class="sheet__stamp">見本 SAMPLE</span>
+        </div>
+        <p class="sheet__meta"><span>会員<b>No.007</b></span><span>計測<b>秋・定期点検</b></span><span>計測者<b>工房</b></span></p>
+        <div class="sheet__scroll">
+          <table>
+            <thead>
+              <tr><th scope="col">番手</th><th scope="col">ロフト</th><th scope="col">ライ</th><th scope="col">長さ in</th><th scope="col">総重量 g</th><th scope="col">バランス</th><th scope="col">振動数</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1W</td><td>10.5°</td><td>59.0°</td><td>45.25</td><td>305</td><td>D2.0</td><td>248</td></tr>
+              <tr><td>3W</td><td>15.0°</td><td>58.5°</td><td>43.00</td><td>330</td><td>D2.0</td><td>258</td></tr>
+              <tr><td>5W</td><td>18.0°</td><td>59.0°</td><td>42.50</td><td>338</td><td>D2.0</td><td>262</td></tr>
+              <tr class="flag"><td>4U</td><td>22.0°</td><td>59.5°</td><td>40.00</td><td><span class="hit">360</span></td><td>D1.0</td><td>270</td></tr>
+              <tr><td>5I</td><td>24.0°</td><td>61.5°</td><td>38.00</td><td>408</td><td>D2.0</td><td>304</td></tr>
+              <tr><td>6I</td><td>27.0°</td><td>62.0°</td><td>37.50</td><td>415</td><td>D2.0</td><td>308</td></tr>
+              <tr class="flag"><td>7I</td><td>30.5°</td><td><span class="hit">63.5°</span></td><td>37.00</td><td>422</td><td>D2.0</td><td>312</td></tr>
+              <tr><td>8I</td><td>34.5°</td><td>63.0°</td><td>36.50</td><td>429</td><td>D2.0</td><td>317</td></tr>
+              <tr><td>9I</td><td>39.0°</td><td>63.5°</td><td>36.00</td><td>436</td><td>D2.0</td><td>321</td></tr>
+              <tr><td>PW</td><td>44.0°</td><td>64.0°</td><td>35.75</td><td>441</td><td>D2.5</td><td>325</td></tr>
+              <tr><td>50°</td><td>50.0°</td><td>64.0°</td><td>35.50</td><td>447</td><td>D3.0</td><td>328</td></tr>
+              <tr><td>54°</td><td>54.0°</td><td>64.0°</td><td>35.25</td><td>452</td><td>D3.5</td><td>330</td></tr>
+              <tr><td>58°</td><td>58.0°</td><td>64.0°</td><td>35.00</td><td>457</td><td>D4.0</td><td>332</td></tr>
+              <tr><td>PT</td><td>3.0°</td><td>70.0°</td><td>34.00</td><td>545</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="flow">
+          <p class="flow__t"><span>重量フロー（長さ × 総重量）</span><span class="mono">1W → 58°</span></p>
+          <svg viewBox="0 0 572 164" role="img" aria-label="長さと総重量の関係を示す図。4番ユーティリティだけが直線より軽い側に外れている。">
+            <line x1="0" y1="160" x2="572" y2="160" stroke="#191D23" stroke-opacity=".3" stroke-width="1"/>
+            <line x1="36.5" y1="138.3" x2="535.7" y2="20.1" stroke="#191D23" stroke-opacity=".45" stroke-width="1" stroke-dasharray="3 4"/>
+            <g fill="#1F2E46">
+              <circle cx="36.5" cy="138.3" r="3.2"/><circle cx="146.1" cy="118.9" r="3.2"/><circle cx="170.4" cy="112.7" r="3.2"/>
+              <circle cx="389.6" cy="58.2" r="3.2"/><circle cx="413.9" cy="52.8" r="3.2"/><circle cx="438.3" cy="47.3" r="3.2"/>
+              <circle cx="462.6" cy="41.9" r="3.2"/><circle cx="487.0" cy="36.4" r="3.2"/><circle cx="499.1" cy="32.6" r="3.2"/>
+              <circle cx="511.3" cy="27.9" r="3.2"/><circle cx="523.5" cy="24.0" r="3.2"/><circle cx="535.7" cy="20.1" r="3.2"/>
+            </g>
+            <line x1="292.2" y1="79" x2="292.2" y2="90" stroke="#8E7044" stroke-width="1"/>
+            <circle cx="292.2" cy="95.6" r="5.5" fill="#FBF9F4" stroke="#8E7044" stroke-width="1.6"/>
+            <circle cx="292.2" cy="95.6" r="2" fill="#8E7044"/>
+            <g font-family="DM Mono, monospace" font-size="10" fill="#666B74">
+              <text x="36.5" y="154" text-anchor="middle">1W</text>
+              <text x="146.1" y="136" text-anchor="middle">3W</text>
+              <text x="389.6" y="76" text-anchor="middle">5I</text>
+              <text x="535.7" y="38" text-anchor="middle">58°</text>
+            </g>
+            <text x="304" y="112" font-family="DM Mono, monospace" font-size="10.5" fill="#7A4B12">4U −18g</text>
+          </svg>
+        </div>
+
+        <ul class="findings">
+          <li><b>所見</b>4Uだけが流れより軽い。右へ抜ける原因の可能性。重めのシャフト二本を一週間シャフトで比較中。</li>
+          <li>7Iのライ角が前後の番手より1°アップライト。62.5°へ調整。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== MEMBERSHIP =============== -->
+<section class="sec" id="membership">
+  <div class="wrap">
+    <div class="rv">
+      <p class="label">かかりつけ会員｜年間クラブ管理</p>
+      <h2 class="h2">壊れてから来る場所を、<br>壊れる前に診る人へ。</h2>
+      <div class="lede">
+        <p>月額の会員制です。いちばん手前のプランは月3,300円。いつ持ってきていただいても、点検して、必要なら調整します。グリップやシャフトなどの部材は、必要になったときだけ実費でご用意します。</p>
+      </div>
+    </div>
+
+    <div class="care rv">
+      <h3 class="care__h">手入れとは、何をするのか。</h3>
+      <ol>
+        <li><h4><span>LOFT / LIE</span>ロフト角とライ角</h4><p>軟鉄のアイアンは、打ち込むうちに角度が少しずつ動きます。番手ごとの距離の差が詰まってきた、左右どちらかに出やすくなった。そう感じたら、まずここを測ります。</p></li>
+        <li><h4><span>GRIP</span>グリップ</h4><p>使うほど硬くなり、滑りやすくなります。滑る分だけ強く握るようになり、振りそのものが変わっていきます。交換の時期を、状態を見てお伝えします。</p></li>
+        <li><h4><span>BALANCE</span>バランスと緩み</h4><p>鉛の剥がれ、ソケットの浮き、ヘッドのわずかな緩み。打っている本人には気づきにくい小さなずれを、大きくなる前に直します。</p></li>
+      </ol>
+    </div>
+
+    <div class="tiers">
+      <article class="tier rv">
+        <p class="tier__cap"><span>はじめの一歩</span><span>月1回の来店が目安</span></p>
+        <h3 class="tier__name">点検<small>TENKEN</small></h3>
+        <p class="tier__for">いつ持ってきても、診て、必要なら直す。まずはここから。</p>
+        <p class="tier__price"><span class="yen">3,300</span><small>円／月（税込）</small></p>
+        <ul>
+          <li>いつでも点検 <small>（ロフト・ライ・バランス・グリップの状態）</small></li>
+          <li>ロフト・ライ角調整の工賃 <small>（軟鉄）</small></li>
+          <li>バランス調整（鉛）の工賃</li>
+          <li>クラブカルテの作成と保管</li>
+          <li>LINEでの道具相談</li>
+        </ul>
+      </article>
+
+      <article class="tier tier--main rv">
+        <p class="tier__cap"><span>おすすめ</span><span>季節ごとに診る</span></p>
+        <h3 class="tier__name">手入れ<small>TEIRE</small></h3>
+        <p class="tier__for">季節ごとに十四本をまるごと診て、グリップも任せる。職人を一人、味方につけるプランです。</p>
+        <p class="tier__price"><span class="yen">9,900</span><small>円／月（税込）</small></p>
+        <p class="tier__inc">「点検」のすべてに加えて</p>
+        <ul>
+          <li>十四本まるごと点検とカルテ更新　年4回</li>
+          <li>グリップ交換の工賃　年14本まで <small>（グリップ代は別）</small></li>
+          <li>一週間シャフト　年2回</li>
+          <li>コンペ前の仕上げ <small>（溝・グリップ・緩みの点検）</small></li>
+        </ul>
+      </article>
+
+      <article class="tier rv">
+        <p class="tier__cap"><span>試しながら詰めたい方へ</span><span>定員 10名</span></p>
+        <h3 class="tier__name">専属<small>SENZOKU</small></h3>
+        <p class="tier__for">毎月シャフトを試し、練習場で測る。道具を突き詰めたい方の枠です。</p>
+        <p class="tier__price"><span class="yen">26,400</span><small>円／月（税込）</small></p>
+        <p class="tier__inc">「手入れ」のすべてに加えて</p>
+        <ul>
+          <li>一週間シャフト　毎月1回</li>
+          <li>練習場への出張計測　年2回</li>
+          <li>引取り・お届け　月1回 <small>（15km圏内）</small></li>
+          <li>リシャフト工賃　半額</li>
+          <li>入荷品の先行案内</li>
+        </ul>
+      </article>
+    </div>
+
+    <article class="bespoke rv">
+      <div>
+        <p class="bespoke__cap"><span>最上位</span><span>定員 3名</span></p>
+        <h3 class="bespoke__name">別誂<small>BETSU-ATSURAE</small></h3>
+        <p class="bespoke__for">練習場にも、コースにも、職人が出向きます。あなたの十四本のためだけに時間を空けておく、三名だけの枠です。</p>
+        <p class="bespoke__price"><span class="yen">165,000</span><small>円／月（税込）</small></p>
+      </div>
+      <div>
+        <p class="bespoke__inc">「専属」のすべてに加えて</p>
+        <ul>
+        <li>練習場への出張計測　毎月</li>
+        <li>ラウンドへの帯同　年2回 <small>（コースで球筋を見て、その場で調整）</small></li>
+        <li>一週間シャフトを常に二本お手元に <small>（入替自由）</small></li>
+        <li>リシャフト工賃　無料</li>
+        <li>グリップ全交換　年1回 <small>（グリップ代込み）</small></li>
+        <li>営業時間外の貸切対応・試合前の特急仕上げ</li>
+        <li>引取り・お届け　随時</li>
+        <li>予備クラブのお預かり・入荷品の最優先案内</li>
+        </ul>
+      </div>
+    </article>
+
+    <ul class="tiers__note">
+      <li>グリップ・シャフト・鉛などの部材代、出張計測時の打席料、ラウンド帯同時のプレー費は含まれません（「別誂」の年1回のグリップ交換を除く）。</li>
+      <li>ご利用は3か月から。以降は月単位でいつでも退会できます。</li>
+      <li>「専属」「別誂」は出張の時間を確保するため、定員を設けています。引取り・お届け、出張計測は工房から15km圏内が目安です。</li>
+    </ul>
+
+    <div class="why rv">
+      <h3>なぜ、月額なのか。</h3>
+      <p>ロフトやライ角のずれは、打っている本人にはなかなか分かりません。「おかしいな」と感じてから持ち込むのではなく、ついでに寄って見せるだけ。月額にしたのは、その敷居をなくすためです。調整が要らなければ、「問題ありません」とお伝えして終わりです。</p>
+    </div>
+
+    <div class="year rv">
+      <h3 class="year__h">会員の一年</h3>
+      <ol>
+        <li><span class="sm"><span class="s">春</span><span class="m">MAR — MAY</span></span><h4>開幕前の点検</h4><p>全番手を計測し、カルテを更新。冬のあいだに変わった振りに合わせ、ロフトとライを見なおします。</p></li>
+        <li><span class="sm"><span class="s">夏</span><span class="m">JUN — AUG</span></span><h4>グリップと汗</h4><p>滑りはじめる前にグリップを点検・交換。振れる季節に、しっかりめのシャフトを試す時期でもあります。</p></li>
+        <li><span class="sm"><span class="s">秋</span><span class="m">SEP — NOV</span></span><h4>本番前の仕上げ</h4><p>コンペや競技の前に、溝の清掃、緩みの点検、鉛の微調整。練習場で弾道を測り、春の数字と比べます。</p></li>
+        <li><span class="sm"><span class="s">冬</span><span class="m">DEC — FEB</span></span><h4>冬仕様と来季の準備</h4><p>飛ばない季節の番手構成を相談。気になるシャフトを順に借りて、来季の一本を急がずに決めます。</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- =============== WORKS =============== -->
+<section class="sec sec--tint" id="works">
+  <div class="wrap">
+    <div class="rv">
+      <p class="label">工房の仕事</p>
+      <h2 class="h2">道具は、<br>手で合わせる。</h2>
+    </div>
+    <div class="works">
+      <figure class="plate w1 rv">
+        <div class="plate__img"><img src="img/fv2.jpg" width="1096" height="590" alt="人工芝の上に並ぶパターの数々"></div>
+        <figcaption><b>FIG.05</b>パター。ロフトとライを測ったことのある方は、多くありません</figcaption>
+      </figure>
+      <figure class="plate sq w2 rv">
+        <div class="plate__img"><img src="img/ga3.jpg" width="340" height="340" alt="キャディバッグに入ったウェッジ"></div>
+        <figcaption><b>FIG.06</b>ウェッジ</figcaption>
+      </figure>
+      <figure class="plate sq w3 rv">
+        <div class="plate__img"><img src="img/ga1.jpg" width="340" height="340" alt="壁に並ぶグリップ"></div>
+        <figcaption><b>FIG.07</b>グリップ</figcaption>
+      </figure>
+      <figure class="plate sq w4 rv">
+        <div class="plate__img"><img src="img/ga2.jpg" width="340" height="340" alt="ライ角調整機を操作する手"></div>
+        <figcaption><b>FIG.08</b>ライ角調整</figcaption>
+      </figure>
+      <figure class="plate w5 rv">
+        <div class="plate__img" style="aspect-ratio:330/250"><img src="img/sp2.jpg" width="330" height="250" alt="持ち運びできる弾道測定器とタブレット"></div>
+        <figcaption><b>FIG.09</b>練習場へ持っていく測定器</figcaption>
+      </figure>
+      <figure class="plate w6 rv">
+        <div class="plate__img"><img src="img/fv3.jpg" width="1096" height="590" alt="棚に並ぶドライバーヘッド"></div>
+        <figcaption><b>FIG.10</b>ヘッド。メーカーを問わず、合うものを探します</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- =============== VOICES =============== -->
+<section class="sec" id="voices">
+  <div class="wrap">
+    <div class="rv">
+      <p class="label">お客様の声</p>
+      <h2 class="h2">「何ヵ所かの工房に<br>行きましたが、一番です。」</h2>
+    </div>
+    <ul class="voices">
+      <li class="rv">
+        <h3>なんでも相談できる工房</h3>
+        <p>ゴルフ工房というと、ちょっと敷居が高く入りずらい印象がありますがここはそんな様子がまったくありません。私はゴルフを始めて40年経つため、何ヵ所かの工房に行きましたが一番です。よく耳にする量販店等の押し付けが一切ありません、自分のゴルフの状態、悩みを話せば親身になって相談に乗ってくれます。</p>
+      </li>
+      <li class="rv">
+        <h3>親切な対応に感謝です。</h3>
+        <p>知り合いから聞いて初めて行きましたが、1wのボールが吹き上がるのを相談したら親切に相談にのって頂き、ここには試打する設備がないのですが、試打用シャフトをお借りし、後日気に入ったものを購入させて頂きました。</p>
+      </li>
+      <li class="rv">
+        <h3>こんな工房があったとは！</h3>
+        <p>ゴルフについてはどんな事にでも熱心に親切にご教示いただき、ゴルフ以外のお話も気軽に聞いてくれる、”喫茶店的な安らぎを感じれ、気軽に立ち寄れる工房屋さん”ですね。</p>
+      </li>
+    </ul>
+    <p class="src">ゴルファーズ工房に寄せられた声を、原文のまま掲載しています。</p>
+  </div>
+</section>
+
+<!-- =============== REGULAR MENU =============== -->
+<section class="sec sec--tint" id="regular">
+  <div class="wrap">
+    <div class="regular">
+      <div class="rv">
+        <p class="label">ふだんの工房</p>
+        <h2 class="h2">いつもの修理は、<br>これまで通りに。</h2>
+        <div class="lede">
+          <p>グリップ一本の交換も、鉛一枚の調整も、会員でなくてもこれまで通り承ります。扉はいつも開けてあります。</p>
+        </div>
+        <a class="textlink" href="https://golferskoubou.com/" target="_blank" rel="noopener">ゴルファーズ工房の通常メニューを見る <span class="mono">→</span></a>
+      </div>
+      <dl class="rv">
+        <dt>グリップ交換（当店購入）</dt><dd>330<small>円</small></dd>
+        <dt>シャフト交換</dt><dd>3,300<small>円</small></dd>
+        <dt>ロフト・ライ角調整</dt><dd>550<small>円</small></dd>
+        <dt>バランス調整（鉛テープ）</dt><dd>550<small>円</small></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- =============== FAQ =============== -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="rv">
+      <p class="label">よくあるご質問</p>
+      <h2 class="h2">ご相談の前に。</h2>
+    </div>
+    <div class="faq rv">
+      <details>
+        <summary>他店で買ったクラブや、中古クラブでも診てもらえますか。</summary>
+        <p>はい。どこで手に入れたクラブでも構いません。むしろ、一本ずつ買い足してきたセットほど、カルテにすると発見があります。</p>
+      </details>
+      <details>
+        <summary>自分のドライバーに合うシャフトは借りられますか。</summary>
+        <p>主要メーカーのスリーブを中心にご用意しています。お持ちのヘッドの機種をお知らせいただければ、ご相談の段階で対応できるかお答えします。</p>
+      </details>
+      <details>
+        <summary>借りたシャフトに傷をつけてしまったら。</summary>
+        <p>ふつうに打ってつく小傷は、請求しません。折損や紛失の場合のみ、お貸しする前にお伝えした上限額の範囲で実費をお願いしています。</p>
+      </details>
+      <details>
+        <summary>出張計測は、どこまで来てもらえますか。</summary>
+        <p>工房から15km圏内の練習場が目安です。それより遠い場合もご相談ください。打席料はお客様のご負担となります。</p>
+      </details>
+      <details>
+        <summary>腕前に自信がありません。会員になってもよいのでしょうか。</summary>
+        <p>もちろんです。道具が合っていないまま練習を重ねるほうが、遠回りになることがあります。スコアや経験年数は問いません。</p>
+      </details>
+      <details>
+        <summary>会員をやめたくなったら。</summary>
+        <p>最初の3か月を過ぎれば、月単位でいつでも退会できます。カルテの写しは、退会後もお渡しします。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- =============== CONTACT / SHOP =============== -->
+<section class="sec sec--dark" id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div class="rv">
+        <p class="label">ご相談</p>
+        <h2 class="h2">まず、いまの十四本を<br>教えてください。</h2>
+        <div class="lede">
+          <p>入会やレンタルを決めていただく必要はありません。バッグの中身の写真と、最近の悩みをひとつ。そこから始めます。</p>
+        </div>
+        <div class="contact__cta">
+          <!-- TODO: LINE公式アカウントのURLに差し替え -->
+          <a class="btn btn--light" href="https://line.me/R/ti/p/@REPLACE_ME" data-placeholder="line-url">LINEで相談する <span class="arr">→</span></a>
+          <a class="btn btn--line-light" href="tel:03-6873-7424">電話で相談する <span class="mono">03-6873-7424</span></a>
+          <a class="btn btn--line-light" href="https://www.instagram.com/golferskoubou/" target="_blank" rel="noopener">Instagram のDMで <span class="arr">→</span></a>
+        </div>
+        <p class="contact__hint">作業中は電話に出られないことがあります。折り返しますので、お名前を残してください。LINEとDMは、いつでもお送りいただけます。</p>
+      </div>
+
+      <div class="rv" id="shop">
+        <p class="label">店舗</p>
+        <dl class="shop">
+          <div><dt>屋号</dt><dd>ゴルファーズ工房（Golfer's工房）</dd></div>
+          <div><dt>住所</dt><dd>〒174-0046<br>東京都板橋区蓮根2丁目19-27<br><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%9D%BF%E6%A9%8B%E5%8C%BA%E8%93%AE%E6%A0%B92-19-27" target="_blank" rel="noopener">地図を開く</a></dd></div>
+          <div><dt>最寄り</dt><dd>都営三田線　蓮根駅</dd></div>
+          <div><dt>営業</dt><dd>11:00 – 19:00　火曜定休<br>時間外も、ご連絡いただければ対応します。</dd></div>
+          <div><dt>電話</dt><dd><a class="tel" href="tel:03-6873-7424">03-6873-7424</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span>誂 ATSURAE — by ゴルファーズ工房</span>
+    <span><a href="https://golferskoubou.com/" target="_blank" rel="noopener">golferskoubou.com</a>　／　<a href="https://www.instagram.com/golferskoubou/" target="_blank" rel="noopener">Instagram</a></span>
+    <span>© ゴルファーズ工房</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:.05});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

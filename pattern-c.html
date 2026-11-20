@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FIELD SPEC｜コースで決めるシャフトレンタル（ゴルファーズ工房・板橋）</title>
+<meta name="description" content="試打室の30球より、本番の18ホール。板橋区蓮根のゴルファーズ工房による、7泊8日のシャフトレンタルと出張計測、年間クラブ管理。">
+<meta name="format-detection" content="telephone=no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#121416;
+  --bg-2:#1A1D20;
+  --panel:#202428;
+  --fg:#ECEAE4;
+  --fg-2:#C3C4C0;
+  --muted:#8E9391;
+  --line:rgba(236,234,228,.15);
+  --line-2:rgba(236,234,228,.08);
+  --accent:#FF5B1F;
+  --accent-ink:#1A0A03;
+  --paper:#ECEAE4;
+  --paper-ink:#15181A;
+  --paper-line:rgba(21,24,26,.16);
+  --jp:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
+  --cond:"Barlow Condensed","Arial Narrow",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --wrap:1160px;
+  --gutter:clamp(20px,5vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--jp);font-size:15.5px;line-height:1.85;letter-spacing:.02em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure,blockquote{margin:0}
+ul,ol{padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+.g>*{min-width:0}
+.en{font-family:var(--cond);letter-spacing:.06em;text-transform:uppercase}
+.mono{font-family:var(--mono);letter-spacing:0}
+.ac{color:var(--accent)}
+
+.draft{background:var(--accent);color:var(--accent-ink);font-size:11.5px;font-weight:700;letter-spacing:.12em;text-align:center;padding:6px 16px;line-height:1.5}
+
+/* header */
+.head{position:sticky;top:0;z-index:20;background:rgba(18,20,22,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.head__in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{display:flex;align-items:baseline;gap:12px;text-decoration:none;white-space:nowrap}
+.brand b{font-family:var(--cond);font-weight:700;font-size:25px;letter-spacing:.08em;line-height:1}
+.brand b i{font-style:normal;color:var(--accent)}
+.brand span{font-size:11px;color:var(--muted);letter-spacing:.1em}
+.nav{display:flex;align-items:center;gap:26px}
+.nav__links{display:none;gap:26px;font-family:var(--cond);font-weight:600;font-size:16px;letter-spacing:.14em}
+.nav__links a{text-decoration:none;color:var(--fg-2)}
+.nav__links a:hover{color:var(--accent)}
+@media (min-width:900px){.nav__links{display:flex}}
+@media (max-width:420px){.brand span{display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.7em;min-height:54px;padding:0 28px;background:var(--accent);color:var(--accent-ink)!important;text-decoration:none;font-weight:900;font-size:15px;letter-spacing:.08em;white-space:nowrap;border:2px solid var(--accent);transition:transform .15s,background .15s}
+.btn:hover{background:#FF7440;border-color:#FF7440;transform:translateY(-1px)}
+.btn--ghost{background:transparent;color:var(--fg)!important;border-color:var(--line)}
+.btn--ghost:hover{background:rgba(236,234,228,.08);border-color:var(--fg-2)}
+.btn--sm{min-height:40px;padding:0 18px;font-size:13px}
+.btn--dark{background:var(--paper-ink);border-color:var(--paper-ink);color:var(--paper)!important}
+
+/* photo frame */
+.shot{position:relative;background:#000}
+.shot img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.18) brightness(.92)}
+.shot::before,.shot::after{content:"";position:absolute;width:16px;height:16px;border:2px solid var(--accent);z-index:1}
+.shot::before{left:-6px;top:-6px;border-right:0;border-bottom:0}
+.shot::after{right:-6px;bottom:-6px;border-left:0;border-top:0}
+.shot figcaption,.cap{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.06em;margin-top:8px}
+
+/* hero */
+.hero{padding:clamp(32px,5vw,64px) 0 clamp(48px,7vw,88px);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line-2) 1px,transparent 1px),linear-gradient(90deg,var(--line-2) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(180deg,#000 0%,transparent 78%);-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 78%);pointer-events:none}
+.hero .wrap{position:relative}
+.tagrow{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.08em}
+.tagrow b{color:var(--accent);font-weight:500}
+.hero__grid{margin-top:28px;display:grid;gap:36px;align-items:end}
+@media (min-width:960px){.hero__grid{grid-template-columns:minmax(0,1fr) 300px;gap:56px}}
+.hero h1{font-weight:900;font-size:clamp(1.8rem,5.5vw,4.3rem);line-height:1.25;letter-spacing:-.005em}
+.hero h1 .ln{white-space:nowrap;display:block}
+.hero h1 .num{font-family:var(--cond);font-weight:700;font-size:1.42em;line-height:.8;letter-spacing:-.01em;color:var(--accent);margin:0 .04em;vertical-align:-.04em}
+.hero h1 .dim{color:var(--muted)}
+.hero__lead{margin-top:26px;max-width:33em;font-size:clamp(.98rem,1.9vw,1.08rem);color:var(--fg-2);line-height:2}
+.hero__cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.hero__shots{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:440px}
+@media (min-width:960px){.hero__shots{grid-template-columns:1fr;max-width:none}}
+.hero__shots .shot{aspect-ratio:330/250}
+
+/* timeline */
+.tl{margin-top:clamp(40px,6vw,64px)}
+.tl__h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:10px;border-bottom:1px solid var(--fg)}
+.tl__h b{font-family:var(--cond);font-weight:700;font-size:20px;letter-spacing:.12em}
+.tl__h span{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.tl ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (min-width:860px){.tl ol{grid-template-columns:repeat(8,minmax(0,1fr))}}
+.tl li{padding:14px 10px 16px 12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:104px;position:relative}
+.tl li:nth-child(4n+1){border-left:1px solid var(--line)}
+@media (min-width:860px){.tl li:nth-child(4n+1){border-left:0}.tl li:first-child{border-left:1px solid var(--line)}}
+.tl .d{font-family:var(--cond);font-weight:600;font-size:13px;letter-spacing:.14em;color:var(--muted)}
+.tl .d b{display:block;font-size:34px;line-height:1;font-weight:700;color:var(--fg);letter-spacing:0}
+.tl .t{margin-top:8px;font-size:12px;line-height:1.5;color:var(--fg-2);font-weight:500}
+.tl li.on{background:var(--accent);color:var(--accent-ink)}
+.tl li.on .d,.tl li.on .d b,.tl li.on .t{color:var(--accent-ink)}
+.tl li.on .t{font-weight:900}
+.tl li.mid{background:var(--panel)}
+
+/* sections */
+.sec{padding:clamp(64px,9vw,120px) 0;border-top:1px solid var(--line)}
+.sec--panel{background:var(--bg-2)}
+.sec--paper{background:var(--paper);color:var(--paper-ink);border-top:0}
+.idx{display:flex;align-items:center;gap:14px;font-family:var(--cond);font-weight:600;font-size:15px;letter-spacing:.2em;color:var(--accent)}
+.idx::after{content:"";flex:0 0 48px;height:2px;background:var(--accent)}
+.sec--paper .idx{color:#C63F0A}.sec--paper .idx::after{background:#C63F0A}
+.h2{margin-top:14px;font-weight:900;font-size:clamp(1.7rem,4.8vw,3rem);line-height:1.35;letter-spacing:0}
+.lede{margin-top:20px;max-width:36em;color:var(--fg-2);font-size:15.5px;line-height:2}
+.sec--paper .lede{color:#3C4245}
+
+/* versus */
+.vs{margin-top:44px;border-top:1px solid var(--fg)}
+.vs__row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:1px solid var(--line)}
+@media (min-width:820px){.vs__row{grid-template-columns:180px minmax(0,1fr) minmax(0,1.15fr)}}
+.vs__k{grid-column:1/-1;padding:14px 0 0;font-family:var(--cond);font-weight:600;font-size:14px;letter-spacing:.16em;color:var(--muted)}
+@media (min-width:820px){.vs__k{grid-column:auto;padding:22px 0}}
+.vs__a,.vs__b{padding:10px 14px 18px 0;font-size:15px;line-height:1.7}
+@media (min-width:820px){.vs__a,.vs__b{padding:20px 20px 20px 0}}
+.vs__a{color:var(--muted)}
+.vs__b{font-weight:700;padding-left:14px;border-left:2px solid var(--accent)}
+.vs__row--h .vs__a,.vs__row--h .vs__b{font-family:var(--cond);font-weight:700;font-size:22px;letter-spacing:.08em;padding-top:16px;padding-bottom:14px}
+.vs__row--h .vs__b{color:var(--accent)}
+.vs__row--h .vs__k{display:none}
+@media (min-width:820px){.vs__row--h .vs__k{display:block}}
+.vs__note{margin-top:14px;font-size:12px;color:var(--muted)}
+
+/* rental pricing */
+.rent{margin-top:44px;display:grid;gap:44px}
+@media (min-width:960px){.rent{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:64px;align-items:start}}
+.prices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:2px solid var(--paper-ink);border-left:1px solid var(--paper-line)}
+.pr{padding:20px 18px 22px;border-right:1px solid var(--paper-line);border-bottom:1px solid var(--paper-line);position:relative}
+.pr--main{background:var(--paper-ink);color:var(--paper)}
+.pr .k{font-weight:900;font-size:15px;line-height:1.5}
+.pr .k small{display:block;font-weight:500;font-size:12px;color:#5B6266}
+.pr--main .k small{color:#A9AEAC}
+.pr .v{margin-top:14px;font-family:var(--cond);font-weight:700;font-size:clamp(2.6rem,7vw,3.9rem);line-height:.9;letter-spacing:-.01em}
+.pr .v small{font-family:var(--jp);font-size:13px;font-weight:700;margin-left:4px;letter-spacing:.04em}
+.pr--main .v{color:var(--accent)}
+.pr .rec{position:absolute;top:14px;right:14px;font-family:var(--cond);font-weight:700;font-size:13px;letter-spacing:.14em;background:var(--accent);color:var(--accent-ink);padding:1px 8px}
+.rules{margin-top:22px;display:grid;gap:0;font-size:14px;border-top:1px solid var(--paper-line)}
+.rules li{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--paper-line);line-height:1.7}
+.rules b{font-family:var(--cond);font-weight:700;font-size:14px;letter-spacing:.12em;color:#C63F0A;padding-top:.1em}
+.how{counter-reset:h;display:grid;gap:0;border-top:2px solid var(--paper-ink)}
+.how li{counter-increment:h;display:grid;grid-template-columns:54px minmax(0,1fr);gap:0 10px;padding:18px 0;border-bottom:1px solid var(--paper-line)}
+.how li::before{content:"0" counter(h);font-family:var(--cond);font-weight:700;font-size:30px;line-height:1.1;color:#C63F0A}
+.how h3{font-weight:900;font-size:1.05rem;line-height:1.6}
+.how p{grid-column:2;font-size:14px;color:#3C4245;line-height:1.8}
+.pull{margin-top:22px;padding:18px 20px;background:#DEDBD2;font-size:13.5px;line-height:1.9;border-left:3px solid #C63F0A}
+.pull cite{display:block;margin-top:6px;font-style:normal;font-size:12px;color:#5B6266}
+
+/* fitting */
+.fit{margin-top:44px;display:grid;gap:40px}
+@media (min-width:960px){.fit{grid-template-columns:300px minmax(0,1fr);gap:60px;align-items:start}}
+.fit .shot{aspect-ratio:330/250;max-width:330px}
+.cmp{background:var(--panel);border:1px solid var(--line)}
+.cmp__h{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em}
+.cmp__h b{font-family:var(--cond);font-weight:700;font-size:16px;letter-spacing:.14em;color:var(--fg)}
+.cmp__h i{font-style:normal;border:1px solid var(--accent);color:var(--accent);padding:0 8px}
+.cmp table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.cmp th,.cmp td{padding:13px 12px;border-bottom:1px solid var(--line-2);text-align:right;white-space:nowrap}
+.cmp th{font-family:var(--cond);font-weight:600;font-size:13px;letter-spacing:.12em;color:var(--muted)}
+.cmp td{font-family:var(--mono);font-size:clamp(13px,2.6vw,17px)}
+.cmp td small{font-size:.66em;color:var(--muted);margin-left:3px}
+.cmp th:first-child,.cmp td:first-child{text-align:left;font-family:var(--jp);font-weight:700;font-size:13px;white-space:normal;line-height:1.5}
+.cmp td:first-child small{display:block;font-family:var(--mono);font-weight:400;margin:0;font-size:10.5px}
+.cmp tr.win td{background:rgba(255,91,31,.1)}
+.cmp tr.win td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
+.cmp tr.win td b{color:var(--accent);font-weight:500}
+.cmp__f{padding:14px 16px;font-size:13px;color:var(--fg-2);line-height:1.8}
+.cmp__f b{font-family:var(--cond);font-size:14px;letter-spacing:.14em;color:var(--accent);margin-right:10px}
+@media (max-width:560px){.cmp th:nth-child(4),.cmp td:nth-child(4){display:none}}
+
+/* spec sheet */
+.spec{margin-top:44px;display:grid;gap:36px}
+@media (min-width:960px){.spec{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:start}}
+.chart{background:var(--panel);border:1px solid var(--line);padding:18px 18px 14px}
+.chart__h{display:flex;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:8px}
+.chart svg{width:100%;height:auto;display:block;overflow:visible}
+.items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--fg)}
+.items li{padding:12px 0;border-bottom:1px solid var(--line);font-weight:700;font-size:14.5px;display:flex;flex-direction:column;line-height:1.5}
+.items li:nth-child(odd){padding-right:12px}
+.items li span{font-family:var(--mono);font-weight:400;font-size:10.5px;color:var(--muted)}
+.find{margin-top:18px;font-size:13.5px;color:var(--fg-2);line-height:1.9}
+.find b{font-family:var(--cond);font-size:14px;letter-spacing:.14em;color:var(--accent);margin-right:10px}
+
+/* plans */
+.plans{margin-top:44px;display:grid;gap:16px}
+@media (min-width:960px){.plans{grid-template-columns:repeat(3,minmax(0,1fr));gap:0}}
+.plan{border:1px solid var(--line);padding:26px 24px 30px;background:var(--bg)}
+@media (min-width:960px){.plan+.plan{border-left:0}}
+.plan--main{background:var(--panel);box-shadow:inset 0 3px 0 var(--accent)}
+.plan__top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.plan__top b{font-family:var(--cond);font-weight:700;font-size:13px;letter-spacing:.14em;background:var(--accent);color:var(--accent-ink);padding:0 8px}
+.plan__name{margin-top:10px;font-family:var(--cond);font-weight:700;font-size:3.1rem;line-height:1;letter-spacing:.04em}
+.plan__jp{margin-top:8px;font-size:13.5px;color:var(--fg-2);line-height:1.7;min-height:3.4em}
+.plan__price{margin-top:16px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-family:var(--cond);font-weight:700;font-size:2.7rem;line-height:1;display:flex;align-items:baseline;gap:8px}
+.plan--main .plan__price{color:var(--accent)}
+.plan__price small{font-family:var(--jp);font-weight:500;font-size:12px;color:var(--muted)}
+.plan__inc{margin-top:16px;font-size:12px;color:var(--muted);font-weight:700}
+.plan ul{margin-top:10px;display:grid;gap:8px;font-size:14px;line-height:1.7}
+.plan li{padding-left:1.4em;position:relative}
+.plan li::before{content:"+";position:absolute;left:0;font-family:var(--mono);color:var(--accent)}
+.plan li small{font-size:12px;color:var(--muted)}
+.plans__note{margin-top:22px;font-size:12.5px;color:var(--muted);line-height:1.9}
+.top{margin-top:16px;background:var(--paper);color:var(--paper-ink);padding:clamp(24px,4vw,44px);display:grid;gap:28px;box-shadow:inset 0 4px 0 var(--accent)}
+@media (min-width:960px){.top{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:60px;align-items:start}}
+.top__meta{display:flex;gap:14px;align-items:center;font-family:var(--mono);font-size:11px;color:#5B6266}
+.top__meta b{font-family:var(--cond);font-weight:700;font-size:13px;letter-spacing:.14em;background:var(--paper-ink);color:var(--paper);padding:0 8px}
+.top__name{margin-top:10px;font-family:var(--cond);font-weight:700;font-size:clamp(3.4rem,9vw,5rem);line-height:.95;letter-spacing:.04em}
+.top__jp{margin-top:12px;font-size:14px;line-height:1.8;color:#3C4245;max-width:26em}
+.top__price{margin-top:18px;padding-top:14px;border-top:2px solid var(--paper-ink);font-family:var(--cond);font-weight:700;font-size:clamp(3rem,8vw,4.2rem);line-height:1;color:#C63F0A;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.top__price small{font-family:var(--jp);font-weight:500;font-size:12px;color:#5B6266}
+.top__inc{font-size:12px;font-weight:700;color:#5B6266;padding-bottom:10px;border-bottom:2px solid var(--paper-ink)}
+.top ul{display:grid;font-size:14.5px;font-weight:700;line-height:1.7}
+@media (min-width:640px){.top ul{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px}}
+.top li{padding:12px 0 12px 1.4em;position:relative;border-bottom:1px solid var(--paper-line)}
+.top li::before{content:"+";position:absolute;left:0;font-family:var(--mono);color:#C63F0A}
+.top li small{display:block;font-weight:400;font-size:12px;color:#5B6266}
+.care{margin-top:40px;display:grid;border-top:1px solid var(--fg)}
+@media (min-width:900px){.care{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.care li{padding:20px 0;border-bottom:1px solid var(--line)}
+@media (min-width:900px){.care li{padding:22px 24px 22px 0}.care li+li{padding-left:24px;border-left:1px solid var(--line)}}
+.care b{font-family:var(--cond);font-weight:700;font-size:14px;letter-spacing:.16em;color:var(--accent);display:block}
+.care h3{font-weight:900;font-size:1.05rem;line-height:1.6}
+.care p{margin-top:6px;font-size:13.5px;color:var(--fg-2);line-height:1.85}
+
+/* craftsman */
+.craft{margin-top:8px;display:grid;gap:40px}
+@media (min-width:960px){.craft{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start}}
+.craft__shots{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:520px}
+.craft__shots .shot{aspect-ratio:1/1}
+.voices{margin-top:8px;display:grid;gap:0;border-top:1px solid var(--paper-ink)}
+.voices li{padding:20px 0;border-bottom:1px solid var(--paper-line)}
+.voices p{font-size:14.5px;line-height:1.95;color:#2B3033}
+.voices cite{display:block;margin-top:6px;font-style:normal;font-family:var(--mono);font-size:11px;color:#5B6266}
+
+/* faq */
+.faq{margin-top:36px;border-top:1px solid var(--fg);max-width:860px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 40px 18px 0;position:relative;font-weight:700;line-height:1.7}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:14px;font-family:var(--mono);font-size:22px;color:var(--accent);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{padding:0 0 20px;font-size:14.5px;color:var(--fg-2);max-width:44em}
+
+/* contact */
+.contact{display:grid;gap:44px}
+@media (min-width:960px){.contact{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:72px;align-items:start}}
+.contact__cta{margin-top:28px;display:grid;gap:12px;max-width:420px}
+.contact__cta .btn{width:100%;justify-content:space-between}
+.contact__hint{margin-top:14px;font-size:12.5px;color:var(--muted);line-height:1.8}
+.shop{border-top:1px solid var(--fg)}
+.shop div{display:grid;grid-template-columns:6.5em minmax(0,1fr);gap:10px;padding:15px 0;border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.8}
+.shop dt{font-family:var(--cond);font-weight:600;font-size:14px;letter-spacing:.16em;color:var(--accent);padding-top:.1em}
+.shop a{text-underline-offset:4px}
+.shop .tel{font-family:var(--cond);font-weight:700;font-size:1.9rem;letter-spacing:.04em;text-decoration:none;line-height:1.2}
+
+.foot{border-top:1px solid var(--line);padding:24px 0 32px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.foot__in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
+</style>
+</head>
+<body>
+
+<p class="draft">検討用ドラフト｜名称・料金・サービス内容はすべて仮案です</p>
+
+<header class="head">
+  <div class="wrap head__in">
+    <a class="brand" href="#top"><b>FIELD<i>/</i>SPEC</b><span>by Golfer's工房</span></a>
+    <nav class="nav" aria-label="ページ内">
+      <span class="nav__links">
+        <a href="#rental">RENTAL</a>
+        <a href="#fitting">FITTING</a>
+        <a href="#spec">SPEC SHEET</a>
+        <a href="#crew">MEMBERSHIP</a>
+        <a href="#shop">SHOP</a>
+      </span>
+      <a class="btn btn--sm" href="#contact">相談する</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <p class="tagrow"><span><b>●</b> SHAFT RENTAL / ON-SITE FITTING</span><span>ITABASHI, TOKYO</span><span>35.78°N 139.68°E</span></p>
+    <div class="hero__grid g">
+      <div>
+        <h1><span class="ln"><span class="dim">試打室の</span><span class="num">30</span><span class="dim">球より、</span></span><span class="ln">本番の<span class="num">18</span>ホール。</span></h1>
+        <p class="hero__lead">シャフトは7泊8日で貸し出す。計測器は、あなたの練習場まで持っていく。板橋・蓮根のゴルファーズ工房がはじめる、現場で決めるフィッティング。</p>
+        <div class="hero__cta">
+          <a class="btn" href="#contact">レンタルを相談する →</a>
+          <a class="btn btn--ghost" href="#rental">料金を見る</a>
+        </div>
+      </div>
+      <div class="hero__shots">
+        <figure class="shot"><img src="img/sp1.jpg" width="330" height="250" alt="ドライバーヘッドにシャフトを合わせる職人の手"></figure>
+      </div>
+    </div>
+
+    <div class="tl" aria-label="7泊8日の使い方">
+      <p class="tl__h"><b>8 DAYS / 7 NIGHTS</b><span>レンタル期間の使い方（例）</span></p>
+      <ol>
+        <li class="on"><p class="d">DAY<b>1</b></p><p class="t">受け取り</p></li>
+        <li class="mid"><p class="d">DAY<b>2</b></p><p class="t">練習場 ①</p></li>
+        <li><p class="d">DAY<b>3</b></p><p class="t">—</p></li>
+        <li class="mid"><p class="d">DAY<b>4</b></p><p class="t">練習場 ②</p></li>
+        <li><p class="d">DAY<b>5</b></p><p class="t">—</p></li>
+        <li><p class="d">DAY<b>6</b></p><p class="t">—</p></li>
+        <li class="on"><p class="d">DAY<b>7</b></p><p class="t">ラウンド 18H</p></li>
+        <li class="on"><p class="d">DAY<b>8</b></p><p class="t">返却・判断</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- VERSUS -->
+<section class="sec sec--panel" id="why">
+  <div class="wrap">
+    <p class="idx">WHY FIELD</p>
+    <h2 class="h2">試打室は、持たない。<br>現場のほうが正確だから。</h2>
+    <p class="lede">マットの上の数十球で決めたシャフトが、コースで別物になる。よくある話だ。この工房には試打室がない。かわりに、道具のほうを現場へ出す。</p>
+
+    <div class="vs">
+      <div class="vs__row vs__row--h"><p class="vs__k"></p><p class="vs__a">INDOOR</p><p class="vs__b">FIELD SPEC</p></div>
+      <div class="vs__row"><p class="vs__k">球数</p><p class="vs__a">数十球</p><p class="vs__b">練習場 2〜3回 ＋ ラウンド</p></div>
+      <div class="vs__row"><p class="vs__k">場所</p><p class="vs__a">マットとネット</p><p class="vs__b">いつもの打席と、芝の上</p></div>
+      <div class="vs__row"><p class="vs__k">ボール</p><p class="vs__a">試打用ボール</p><p class="vs__b">自分の使用球</p></div>
+      <div class="vs__row"><p class="vs__k">体の状態</p><p class="vs__a">打ちはじめの数十分</p><p class="vs__b">朝イチも、疲れた後半も</p></div>
+      <div class="vs__row"><p class="vs__k">決める時</p><p class="vs__a">その場で</p><p class="vs__b">返却後、30日以内</p></div>
+    </div>
+    <p class="vs__note">※ 一般的な室内試打との比較イメージです。</p>
+  </div>
+</section>
+
+<!-- RENTAL -->
+<section class="sec sec--paper" id="rental">
+  <div class="wrap">
+    <p class="idx">01 — SHAFT RENTAL</p>
+    <h2 class="h2">二本借りて、<br>コースで比べる。</h2>
+    <p class="lede">スリーブ付きドライバー用シャフトのレンタル。一本では基準がないから、性格のちがう二本を同時に出す。お手持ちのヘッドに、レンチ一本で付け替えられる。</p>
+
+    <div class="rent g">
+      <div>
+        <div class="prices">
+          <div class="pr pr--main"><span class="rec">BEST</span><p class="k">二本くらべ<small>性格のちがう二本を同時に</small></p><p class="v">5,500<small>円</small></p></div>
+          <div class="pr"><p class="k">一本<small>候補が決まっている方</small></p><p class="v">3,300<small>円</small></p></div>
+          <div class="pr"><p class="k">特選シャフト 一本<small>高価格帯のモデル</small></p><p class="v">5,500<small>円</small></p></div>
+          <div class="pr"><p class="k">延長<small>一日あたり</small></p><p class="v">550<small>円</small></p></div>
+        </div>
+        <ul class="rules">
+          <li><b>TERM</b><span>7泊8日。すべて税込。</span></li>
+          <li><b>CREDIT</b><span>返却から30日以内の注文で、レンタル料をシャフト代に充当（上限5,500円）。</span></li>
+          <li><b>DAMAGE</b><span>通常使用の小傷は請求なし。折損・紛失のみ、事前に伝えた上限額の範囲で実費。</span></li>
+          <li><b>PICK UP</b><span>店頭、または工房から15km圏内へ配達。</span></li>
+        </ul>
+      </div>
+      <div>
+        <ol class="how">
+          <li><h3>相談</h3><p>いまのドライバーと球筋をLINEで。写真だけでもいい。</p></li>
+          <li><h3>選定</h3><p>職人が候補を絞り、二本を選ぶ。</p></li>
+          <li><h3>実打</h3><p>一週間。練習場とコースで。</p></li>
+          <li><h3>判断</h3><p>組むか、返すか、別の二本を試すか。</p></li>
+        </ol>
+        <p class="pull">「ここには試打する設備がないのですが、試打用シャフトをお借りし、後日気に入ったものを購入させて頂きました。」<cite>— お客様の声より。FIELD SPEC は、この貸し出しを仕組みにしたもの。</cite></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FITTING -->
+<section class="sec" id="fitting">
+  <div class="wrap">
+    <p class="idx">02 — ON-SITE FITTING</p>
+    <h2 class="h2">測定器が、<br>練習場まで行く。</h2>
+    <p class="lede">弾道測定器を持って、あなたがいつも打っている打席へ。借りた二本の差を、感覚と数字の両方で確かめる。</p>
+
+    <div class="fit g">
+      <div>
+        <figure class="shot"><img src="img/sp2.jpg" width="330" height="250" alt="持ち運びできる弾道測定器とタブレット"></figure>
+        <p class="cap">持ち運びできる弾道測定器</p>
+      </div>
+      <div class="cmp" aria-label="二本くらべの計測結果の見本">
+        <p class="cmp__h"><b>二本くらべ / 1W</b><i>SAMPLE</i></p>
+        <table>
+          <thead><tr><th scope="col">SHAFT</th><th scope="col">CARRY</th><th scope="col">SPIN</th><th scope="col">LAUNCH</th><th scope="col">左右ブレ</th></tr></thead>
+          <tbody>
+            <tr><td>現在のシャフト<small>50g台 / S</small></td><td>224<small>yd</small></td><td>3,120<small>rpm</small></td><td>14.8°</td><td>±24<small>yd</small></td></tr>
+            <tr><td>候補 A<small>60g台 / S・先中調子</small></td><td>227<small>yd</small></td><td>2,940<small>rpm</small></td><td>14.1°</td><td>±19<small>yd</small></td></tr>
+            <tr class="win"><td>候補 B<small>60g台 / S・中元調子</small></td><td><b>231</b><small>yd</small></td><td><b>2,480</b><small>rpm</small></td><td>12.9°</td><td><b>±11</b><small>yd</small></td></tr>
+          </tbody>
+        </table>
+        <p class="cmp__f"><b>NOTE</b>吹け上がりが収まり、左右の散らばりが半分に。翌週のラウンドでも同じ傾向を確認して、候補Bで組む。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEC SHEET -->
+<section class="sec sec--panel" id="spec">
+  <div class="wrap">
+    <p class="idx">03 — SPEC SHEET</p>
+    <h2 class="h2">14本を全部測ると、<br>苦手な一本の理由が出る。</h2>
+    <p class="lede">一本ずつ買い足したセットは、重さと長さの流れがどこかで折れている。全番手を同じ台で測り、一枚のスペックシートにして残す。</p>
+
+    <div class="spec g">
+      <div>
+        <div class="chart">
+          <p class="chart__h"><span>WEIGHT FLOW — 長さ × 総重量</span><span>SAMPLE</span></p>
+          <svg viewBox="0 0 572 172" role="img" aria-label="長さと総重量の関係。4番ユーティリティだけが直線より軽い側に外れている。">
+            <g stroke="#ECEAE4" stroke-opacity=".08"><line x1="0" y1="40" x2="572" y2="40"/><line x1="0" y1="80" x2="572" y2="80"/><line x1="0" y1="120" x2="572" y2="120"/></g>
+            <line x1="0" y1="160" x2="572" y2="160" stroke="#ECEAE4" stroke-opacity=".4"/>
+            <line x1="36.5" y1="138.3" x2="535.7" y2="20.1" stroke="#ECEAE4" stroke-opacity=".5" stroke-dasharray="3 5"/>
+            <g fill="#ECEAE4">
+              <circle cx="36.5" cy="138.3" r="3.4"/><circle cx="146.1" cy="118.9" r="3.4"/><circle cx="170.4" cy="112.7" r="3.4"/>
+              <circle cx="389.6" cy="58.2" r="3.4"/><circle cx="413.9" cy="52.8" r="3.4"/><circle cx="438.3" cy="47.3" r="3.4"/>
+              <circle cx="462.6" cy="41.9" r="3.4"/><circle cx="487.0" cy="36.4" r="3.4"/><circle cx="499.1" cy="32.6" r="3.4"/>
+              <circle cx="511.3" cy="27.9" r="3.4"/><circle cx="523.5" cy="24.0" r="3.4"/><circle cx="535.7" cy="20.1" r="3.4"/>
+            </g>
+            <line x1="292.2" y1="78" x2="292.2" y2="89" stroke="#FF5B1F" stroke-width="1.5"/>
+            <circle cx="292.2" cy="95.6" r="6.5" fill="#FF5B1F"/>
+            <g font-family="JetBrains Mono, monospace" font-size="10.5" fill="#8E9391">
+              <text x="36.5" y="155" text-anchor="middle">1W</text><text x="146.1" y="137" text-anchor="middle">3W</text>
+              <text x="389.6" y="77" text-anchor="middle">5I</text><text x="535.7" y="39" text-anchor="middle">58°</text>
+            </g>
+            <text x="306" y="114" font-family="JetBrains Mono, monospace" font-size="12" fill="#FF5B1F">4U  −18g</text>
+          </svg>
+        </div>
+        <p class="find"><b>FINDING</b>4Uだけが流れより18g軽い。右へ抜ける一本の原因はここ。重めのシャフト二本をレンタルして比較へ。</p>
+      </div>
+      <ul class="items">
+        <li>ロフト角<span>LOFT</span></li><li>ライ角<span>LIE</span></li>
+        <li>長さ<span>LENGTH</span></li><li>総重量<span>TOTAL WEIGHT</span></li>
+        <li>バランス<span>SWING WEIGHT</span></li><li>振動数<span>CPM</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERSHIP -->
+<section class="sec" id="crew">
+  <div class="wrap">
+    <p class="idx">04 — MEMBERSHIP</p>
+    <h2 class="h2">自分のピットクルーを、<br>一人持つ。</h2>
+    <p class="lede">月額の会員制。月3,300円から、いつ持ち込んでも点検して、必要なら調整する。部材は必要なときだけ実費。</p>
+
+    <ul class="care">
+      <li><b>LOFT / LIE</b><h3>ロフト角・ライ角</h3><p>軟鉄アイアンは打ち込むうちに角度が動く。番手間の距離が詰まったら、まずここを測る。</p></li>
+      <li><b>GRIP</b><h3>グリップ</h3><p>使うほど硬くなり、滑る。滑る分だけ握りが強くなり、スイングが変わる。</p></li>
+      <li><b>BALANCE</b><h3>バランス・緩み</h3><p>鉛の剥がれ、ソケットの浮き、ヘッドの緩み。本人が気づく前に直す。</p></li>
+    </ul>
+
+    <div class="plans g">
+      <article class="plan">
+        <p class="plan__top"><span>月1回の来店が目安</span></p>
+        <h3 class="plan__name">CHECK</h3>
+        <p class="plan__jp">いつ持ち込んでも点検。必要なら、その場で調整。</p>
+        <p class="plan__price">3,300<small>円／月（税込）</small></p>
+        <ul>
+          <li>いつでも点検 <small>（ロフト・ライ・バランス・グリップ）</small></li>
+          <li>ロフト・ライ角調整工賃 <small>（軟鉄）</small></li>
+          <li>バランス調整（鉛）工賃</li>
+          <li>スペックシートの作成と保管</li>
+          <li>LINEでのギア相談</li>
+        </ul>
+      </article>
+      <article class="plan plan--main">
+        <p class="plan__top"><span>季節ごとに診る</span><b>RECOMMENDED</b></p>
+        <h3 class="plan__name">CREW</h3>
+        <p class="plan__jp">季節ごとに14本を全部測り直す。グリップも任せる。</p>
+        <p class="plan__price">9,900<small>円／月（税込）</small></p>
+        <p class="plan__inc">CHECK の全内容に加えて</p>
+        <ul>
+          <li>14本点検とシート更新　年4回</li>
+          <li>グリップ交換工賃　年14本まで <small>（部材別）</small></li>
+          <li>シャフトレンタル　年2回</li>
+          <li>試合・コンペ前の仕上げ</li>
+        </ul>
+      </article>
+      <article class="plan">
+        <p class="plan__top"><span>定員 10</span></p>
+        <h3 class="plan__name">PIT</h3>
+        <p class="plan__jp">毎月シャフトを試し、練習場で測る。セッティングを詰めたい人へ。</p>
+        <p class="plan__price">26,400<small>円／月（税込）</small></p>
+        <p class="plan__inc">CREW の全内容に加えて</p>
+        <ul>
+          <li>シャフトレンタル　毎月1回</li>
+          <li>練習場への出張計測　年2回</li>
+          <li>引取り・配達　月1回 <small>（15km圏内）</small></li>
+          <li>リシャフト工賃　50% OFF</li>
+          <li>入荷品の先行案内</li>
+        </ul>
+      </article>
+    </div>
+    <article class="top">
+      <div>
+        <p class="top__meta"><b>TOP TIER</b><span>定員 3</span></p>
+        <h3 class="top__name">WORKS</h3>
+        <p class="top__jp">練習場にも、コースにも職人が出る。競技に出る人のための、ワークス体制。枠は3名。</p>
+        <p class="top__price">165,000<small>円／月（税込）</small></p>
+      </div>
+      <div>
+        <p class="top__inc">PIT の全内容に加えて</p>
+        <ul>
+        <li>練習場への出張計測　毎月</li>
+        <li>ラウンドへの帯同　年2回 <small>（コースで球筋を見て、その場で調整）</small></li>
+        <li>レンタルシャフトを常に二本お手元に <small>（入替自由）</small></li>
+        <li>リシャフト工賃　無料</li>
+        <li>グリップ全交換　年1回 <small>（グリップ代込み）</small></li>
+        <li>営業時間外の貸切対応・試合前の特急仕上げ</li>
+        <li>引取り・お届け　随時</li>
+        <li>予備クラブのお預かり・入荷品の最優先案内</li>
+        </ul>
+      </div>
+    </article>
+    <p class="plans__note">※ 最低利用3か月。以降は月単位で退会可。部材代・打席料・ラウンド帯同時のプレー費は別途（WORKS の年1回のグリップ交換を除く）。PIT と WORKS は出張の時間を確保するため定員あり。</p>
+  </div>
+</section>
+
+<!-- CRAFTSMAN / VOICES -->
+<section class="sec sec--paper" id="craft">
+  <div class="wrap">
+    <div class="craft g">
+      <div>
+        <p class="idx">THE WORKSHOP</p>
+        <h2 class="h2">測った人が、<br>そのまま組む。</h2>
+        <p class="lede">計測から組み立て、微調整、納品まで、同じ職人が通す。だから、数字と仕上がりがずれない。買い替えを勧めるのが仕事ではないので、「そのままでいい」も普通に言う。</p>
+        <div class="craft__shots" style="margin-top:32px">
+          <figure class="shot"><img src="img/ga2.jpg" width="340" height="340" alt="ライ角調整機でネックを曲げる手"></figure>
+          <figure class="shot"><img src="img/ga4.jpg" width="340" height="340" alt="シャフトを計測器に載せる手元"></figure>
+        </div>
+      </div>
+      <div>
+        <p class="idx">VOICES</p>
+        <ul class="voices" style="margin-top:20px">
+          <li><p>私はゴルフを始めて40年経つため、何ヵ所かの工房に行きましたが一番です。よく耳にする量販店等の押し付けが一切ありません、自分のゴルフの状態、悩みを話せば親身になって相談に乗ってくれます。</p><cite>お客様の声（原文のまま・抜粋）</cite></li>
+          <li><p>1wのボールが吹き上がるのを相談したら親切に相談にのって頂き、ここには試打する設備がないのですが、試打用シャフトをお借りし、後日気に入ったものを購入させて頂きました。</p><cite>お客様の声（原文のまま・抜粋）</cite></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec">
+  <div class="wrap">
+    <p class="idx">FAQ</p>
+    <h2 class="h2">よくある質問</h2>
+    <div class="faq">
+      <details><summary>自分のドライバーに合うスリーブはあるか。</summary><p>主要メーカーのスリーブを中心に用意。ヘッドの機種を知らせてもらえれば、相談の時点で対応可否を答える。</p></details>
+      <details><summary>レンタル中に傷をつけたら。</summary><p>普通に打ってつく小傷は請求しない。折損・紛失の場合のみ、貸し出し前に伝えた上限額の範囲で実費。</p></details>
+      <details><summary>他店購入や中古のクラブでも見てもらえるか。</summary><p>問題ない。どこで買ったクラブでも測るし、組む。</p></details>
+      <details><summary>通常の修理だけ頼みたい。</summary><p>会員でなくても、これまで通りの料金で受けている。<a href="https://golferskoubou.com/" target="_blank" rel="noopener">通常メニューはこちら</a>。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec sec--panel" id="contact">
+  <div class="wrap">
+    <div class="contact g">
+      <div>
+        <p class="idx">CONTACT</p>
+        <h2 class="h2">まず、いまの一本を<br>教えてほしい。</h2>
+        <p class="lede">ドライバーの機種と、気になっている球筋。それだけ送ってもらえれば、試すべき二本を返信する。</p>
+        <div class="contact__cta">
+          <!-- TODO: LINE公式アカウントのURLに差し替え -->
+          <a class="btn" href="https://line.me/R/ti/p/@REPLACE_ME" data-placeholder="line-url">LINEで相談する <span>→</span></a>
+          <a class="btn btn--ghost" href="tel:03-6873-7424">電話 <span class="mono">03-6873-7424</span></a>
+          <a class="btn btn--ghost" href="https://www.instagram.com/golferskoubou/" target="_blank" rel="noopener">Instagram DM <span>→</span></a>
+        </div>
+        <p class="contact__hint">作業中は電話に出られないことがあります。折り返します。</p>
+      </div>
+      <dl class="shop" id="shop">
+        <div><dt>SHOP</dt><dd>ゴルファーズ工房（Golfer's工房）</dd></div>
+        <div><dt>ADDRESS</dt><dd>〒174-0046<br>東京都板橋区蓮根2丁目19-27<br><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%9D%BF%E6%A9%8B%E5%8C%BA%E8%93%AE%E6%A0%B92-19-27" target="_blank" rel="noopener">地図を開く</a></dd></div>
+        <div><dt>STATION</dt><dd>都営三田線　蓮根駅</dd></div>
+        <div><dt>OPEN</dt><dd>11:00–19:00　火曜定休<br>時間外も連絡があれば対応</dd></div>
+        <div><dt>TEL</dt><dd><a class="tel" href="tel:03-6873-7424">03-6873-7424</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span>FIELD/SPEC — by Golfer's工房</span>
+    <span><a href="https://golferskoubou.com/" target="_blank" rel="noopener">golferskoubou.com</a> / <a href="https://www.instagram.com/golferskoubou/" target="_blank" rel="noopener">Instagram</a></span>
+    <span>© ゴルファーズ工房</span>
+  </div>
+</footer>
+</body>
+</html>
